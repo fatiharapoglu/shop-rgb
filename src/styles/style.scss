@@ -2,6 +2,8 @@
 
 :root {
     --background-primary: #0a1427;
+    --hover: #963939;
+    --transparent: #00000080;
     --primary: #cde7ff;
     --font-1: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -28,4 +30,28 @@ body {
     background-image: linear-gradient(#000b16, #0a1427, #000b16);
     color: var(--primary);
     font-family: var(--font-1);
+    position: relative;
+}
+
+.navbar {
+    background-color: var(--transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    gap: 5rem;
+    height: 10vh;
+
+    .navbar-right {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .active {
+        background-color: var(--hover);
+    }
+}
+
+.container {
+    color: white;
 }
