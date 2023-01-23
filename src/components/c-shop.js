@@ -5,7 +5,7 @@ const Shop = () => {
     return (
         <>
             <Nav />
-            <div> About </div>
+            <div> Shop </div>
         </>
     );
 };
