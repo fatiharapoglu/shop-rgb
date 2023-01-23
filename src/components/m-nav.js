@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <nav className="navbar">
             <Link to="/" className="navbar-left">
-                myShop
+                EliteTechWorks
             </Link>
             <ul className="navbar-right">
                 <li>

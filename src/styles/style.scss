@@ -52,6 +52,49 @@ body {
     }
 }
 
+.homepage {
+    background-image: url("../assets/javier-esteban.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 5rem;
+
+    .btn {
+        background-color: inherit;
+        color: white;
+        border: 1px dashed gray;
+        font-size: 1.25rem;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgb(68, 68, 68);
+    }
+
+    .homepage-header {
+        display: flex;
+        justify-content: space-between;
+
+        .homepage-header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .homepage-header-right {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+
+    .homepage-main {
+        min-height: 500px;
+        height: 50vh;
+        padding: 15rem 0;
+    }
+}
+
 .container {
     color: white;
 }
