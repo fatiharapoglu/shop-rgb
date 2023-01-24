@@ -4,7 +4,6 @@
 :root {
     --background-primary: #0a1427;
     --hover: #fc9797;
-    --transparent: #00000080;
     --primary: #cde7ff;
     --font-1: "Montserrat", sans-serif;
     --homepage-color-1: #cde7ff;
@@ -61,21 +60,69 @@ body {
 }
 
 .navbar {
-    background-color: var(--transparent);
     display: flex;
     justify-content: space-between;
+    padding: 2.5rem 7.5rem;
+    background-color: var(--homepage-transparent-1);
     align-items: center;
-    padding: 0 5rem;
-    gap: 5rem;
-    height: 10vh;
+
+    .navbar-left {
+        .brand {
+            font-weight: 300;
+            font-size: 4rem;
+            letter-spacing: -4px;
+            animation: color-change 10s infinite;
+
+            span {
+                color: var(--homepage-color-1);
+                font-size: 0.75rem;
+                font-weight: 300;
+                letter-spacing: 0;
+                vertical-align: top;
+            }
+        }
+
+        .slogan {
+            font-weight: 200;
+            padding-left: 1rem;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+        }
+
+        a::after {
+            all: revert;
+        }
+
+        a:hover::after {
+            all: revert;
+        }
+    }
 
     .navbar-right {
         display: flex;
-        gap: 2rem;
-    }
+        gap: 3rem;
+        align-items: center;
 
-    .active {
-        background-color: var(--hover);
+        a {
+            transition: all 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--hover);
+        }
+
+        .btn {
+            background-color: inherit;
+            color: var(--homepage-color-1);
+            font-size: inherit;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn:hover {
+            color: var(--hover);
+        }
     }
 }
 
@@ -91,65 +138,6 @@ body {
         width: 100%;
         height: 100%;
         z-index: -1;
-    }
-
-    .homepage-header {
-        display: flex;
-        justify-content: space-between;
-        padding: 2.5rem 7.5rem;
-        background-color: var(--homepage-transparent-1);
-        align-items: center;
-
-        .homepage-header-left {
-            .brand {
-                font-weight: 300;
-                font-size: 4rem;
-                letter-spacing: -4px;
-                animation: color-change 10s infinite;
-
-                span {
-                    color: var(--homepage-color-1);
-                    font-size: 0.75rem;
-                    font-weight: 300;
-                    letter-spacing: 0;
-                    vertical-align: top;
-                }
-            }
-
-            .slogan {
-                font-weight: 200;
-                padding-left: 1rem;
-                letter-spacing: 3px;
-                font-size: 0.8rem;
-            }
-        }
-
-        .homepage-header-right {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-
-            a {
-                transition: all 0.2s ease-in-out;
-            }
-
-            a:hover {
-                color: var(--hover);
-            }
-
-            .btn {
-                background-color: inherit;
-                color: var(--homepage-color-1);
-                font-size: inherit;
-                border: none;
-                cursor: pointer;
-                transition: all 0.2s ease-in-out;
-            }
-
-            .btn:hover {
-                color: var(--hover);
-            }
-        }
     }
 
     .homepage-main-wrapper {
@@ -266,6 +254,14 @@ body {
             align-items: center;
         }
 
+        .about > a::after {
+            all: revert;
+        }
+
+        .about > a:hover::after {
+            all: revert;
+        }
+
         .github-icon {
             height: 25px;
             padding-left: 10px;
@@ -289,6 +285,10 @@ body {
 
 .container {
     color: var(--homepage-color-1);
+}
+
+.active {
+    background-color: var(--hover);
 }
 
 @keyframes color-change {
