@@ -1,6 +1,7 @@
 import React from "react";
 import video from "../assets/background.mp4";
 import { NavLink } from "react-router-dom";
+import Footer from "./m-footer";
 
 const Home = () => {
     return (
@@ -28,6 +29,7 @@ const Home = () => {
             <video className="homepage-background" autoPlay muted loop>
                 <source src={video} type="video/mp4" />
             </video>
+            <Footer />
         </div>
     );
 };

@@ -56,7 +56,6 @@ body {
 
 .homepage {
     min-height: 100vh;
-    padding: 5rem;
     position: relative;
 
     .homepage-background {
@@ -70,9 +69,9 @@ body {
     }
 
     .btn {
-        background-color: inherit;
-        color: white;
-        border: 1px dashed gray;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
         font-size: 1.25rem;
         padding: 5px 10px;
         cursor: pointer;
@@ -85,6 +84,9 @@ body {
     .homepage-header {
         display: flex;
         justify-content: space-between;
+        padding: 1.5rem 5rem;
+        background-color: rgb(0 0 0 / 70%);
+        align-items: center;
 
         .homepage-header-left {
             font-family: var(--font-2);
@@ -118,8 +120,68 @@ body {
 
     .homepage-main {
         min-height: 500px;
-        height: 50vh;
-        padding: 15rem 0;
+        height: 83vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+        font-size: 2rem;
+        padding: 5rem;
+    }
+
+    .homepage-footer {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10vh 20vw;
+        font-size: 0.75rem;
+        position: relative;
+
+        div {
+            flex: 1;
+        }
+
+        .footer-arrow {
+            position: absolute;
+            top: 1rem;
+        }
+
+        h2 {
+            border-bottom: 1px solid rgb(53, 53, 53);
+            padding-bottom: 0.5rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 2rem;
+        }
+    }
+
+    .footer-footer {
+        display: flex;
+        height: 10vh;
+        background-color: rgba(0, 0, 0, 0.85);
+        font-size: 0.8rem;
+        justify-content: center;
+
+        .about {
+            display: flex;
+            align-items: center;
+        }
+
+        .github-icon {
+            height: 25px;
+            padding-left: 10px;
+            padding: 0 10px;
+            transition: transform 1s ease-in-out;
+        }
+
+        .github-icon:hover {
+            transform: rotate(360deg);
+        }
     }
 }
 
