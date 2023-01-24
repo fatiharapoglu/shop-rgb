@@ -7,9 +7,10 @@ const Home = () => {
         <div className="homepage">
             <header className="homepage-header">
                 <div className="homepage-header-left">
-                    <span>RGB PC</span>
-                    <span>Only High End</span>
-                    <span>Where technology meets color</span>
+                    <span className="brand">
+                        RGB <span>PC</span>
+                    </span>
+                    <span className="slogan">Where technology meets color.</span>
                 </div>
                 <div className="homepage-header-right">
                     <NavLink to="/shop">SHOP</NavLink>
