@@ -3,6 +3,8 @@ import video from "../assets/background.mp4";
 import { NavLink } from "react-router-dom";
 import Footer from "./m-footer";
 import rtx from "../assets/4090.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
     return (
@@ -16,7 +18,9 @@ const Home = () => {
                 </div>
                 <div className="homepage-header-right">
                     <NavLink to="/shop">Shop</NavLink>
-                    <button className="btn">Bag</button>
+                    <button className="btn">
+                        <FontAwesomeIcon icon={faCartShopping} />
+                    </button>
                 </div>
             </header>
             <main className="homepage-main-wrapper">

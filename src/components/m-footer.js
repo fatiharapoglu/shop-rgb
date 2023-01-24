@@ -2,11 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import {
-    faFacebook,
-    faTwitter,
-    faYoutube,
+    faFacebookSquare,
+    faTwitterSquare,
+    faYoutubeSquare,
     faLinkedin,
-    faInstagram,
+    faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import github from "../assets/GitHub-Mark-Light-120px-plus.png";
 
@@ -91,22 +91,22 @@ const Footer = () => {
                     <ul>
                         <li>
                             <a href="#">
-                                <FontAwesomeIcon icon={faFacebook} /> Facebook
+                                <FontAwesomeIcon icon={faFacebookSquare} /> Facebook
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <FontAwesomeIcon icon={faInstagram} /> Instagram
+                                <FontAwesomeIcon icon={faInstagramSquare} /> Instagram
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <FontAwesomeIcon icon={faTwitter} /> Twitter
+                                <FontAwesomeIcon icon={faTwitterSquare} /> Twitter
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <FontAwesomeIcon icon={faYoutube} /> Youtube
+                                <FontAwesomeIcon icon={faYoutubeSquare} /> Youtube
                             </a>
                         </li>
                         <li>

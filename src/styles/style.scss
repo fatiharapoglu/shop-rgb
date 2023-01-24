@@ -6,8 +6,7 @@
     --hover: #fc9797;
     --transparent: #00000080;
     --primary: #cde7ff;
-    --font-1: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    --font-2: "Montserrat", sans-serif;
+    --font-1: "Montserrat", sans-serif;
     --homepage-color-1: #cde7ff;
     --homepage-color-2: black;
     --homepage-color-3: beige;
@@ -31,6 +30,25 @@ li {
 a {
     color: inherit;
     text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--hover);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 body {
@@ -83,11 +101,9 @@ body {
         align-items: center;
 
         .homepage-header-left {
-            font-family: var(--font-2);
-
             .brand {
                 font-weight: 300;
-                font-size: 3rem;
+                font-size: 4rem;
                 letter-spacing: -4px;
                 animation: color-change 10s infinite;
 
@@ -165,8 +181,7 @@ body {
             }
 
             .btn:hover {
-                background-color: var(--hover);
-                color: var(--homepage-color-2);
+                color: var(--hover);
             }
 
             h1 {
@@ -202,7 +217,7 @@ body {
         gap: 2rem;
         justify-content: space-evenly;
         background-color: var(--homepage-transparent-1);
-        padding: 10vh 20vw;
+        padding: 10vh 15vw;
         font-size: 0.75rem;
         position: relative;
 
@@ -219,6 +234,8 @@ body {
             border-bottom: var(--dashed);
             padding-bottom: 0.5rem;
             color: var(--homepage-color-3);
+            font-size: 0.8rem;
+            font-weight: 300;
         }
 
         ul {
