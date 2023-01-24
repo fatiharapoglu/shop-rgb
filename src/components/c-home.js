@@ -1,4 +1,5 @@
 import React from "react";
+import video from "../assets/background.mp4";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -23,6 +24,9 @@ const Home = () => {
                     <button className="btn">See All Products</button>
                 </NavLink>
             </main>
+            <video className="homepage-background" autoPlay muted loop>
+                <source src={video} type="video/mp4" />
+            </video>
         </div>
     );
 };
