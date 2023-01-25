@@ -215,6 +215,7 @@ body {
             padding-bottom: 1.5rem;
             font-weight: 100;
             letter-spacing: 3px;
+            color: var(--homepage-color-3);
         }
 
         ul {
@@ -230,11 +231,20 @@ body {
         border: var(--dashed);
         display: flex;
         flex-wrap: wrap;
+        gap: 1rem;
+
+        .product {
+            width: clamp(250px, 30vw, 600px);
+
+            img {
+                max-width: 200px;
+            }
+        }
     }
 }
 
 .about-wrapper {
-    padding: 7.5rem;
+    padding: 15vh 15vw;
     min-height: 80vh;
 
     h1 {

@@ -6,15 +6,13 @@ import About from "./components/c-about";
 
 const App = () => {
     return (
-        <>
-            <div className="container">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/shop/*" element={<Shop />} />
-                    <Route path="/about" element={<About />} />
-                </Routes>
-            </div>
-        </>
+        <div className="container">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/shop/*" element={<Shop />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+        </div>
     );
 };
 
