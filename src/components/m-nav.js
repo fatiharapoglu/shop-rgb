@@ -9,7 +9,7 @@ const Nav = () => {
             <div className="navbar-left">
                 <Link to="/">
                     <span className="brand">
-                        RGB <span>PC</span>
+                        RGB<span>PC</span>
                     </span>
                 </Link>
                 <span className="slogan">Where technology meets color.</span>

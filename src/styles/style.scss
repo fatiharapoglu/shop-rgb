@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-    --background-primary: #0a1427;
+    --background-primary: #131313;
     --hover: #fc9797;
     --primary: #cde7ff;
     --font-1: "Montserrat", sans-serif;
@@ -53,7 +53,6 @@ a:hover::after {
 body {
     min-height: 100vh;
     background-color: var(--background-primary);
-    background-image: linear-gradient(#000b16, #0a1427, #000b16);
     color: var(--primary);
     font-family: var(--font-1);
     position: relative;
@@ -198,87 +197,132 @@ body {
             }
         }
     }
+}
 
-    .homepage-footer {
+.about-container {
+    padding: 7.5rem;
+    height: 80vh;
+
+    h1 {
+        padding-bottom: 2rem;
+        color: var(--homepage-color-3);
+        text-align: center;
+        font-weight: 100;
+        letter-spacing: 5px;
+    }
+
+    > p {
+        text-align: justify;
+        font-size: 1.25rem;
+    }
+
+    .vision-mission {
+        padding-top: 10rem;
         display: flex;
-        gap: 2rem;
-        justify-content: space-evenly;
-        background-color: var(--homepage-transparent-1);
-        padding: 10vh 15vw;
-        font-size: 0.75rem;
-        position: relative;
+        gap: 5rem;
 
-        div {
+        h2 {
+            padding-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--homepage-color-3);
+            font-weight: 100;
+            letter-spacing: 5px;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        .mission {
             flex: 1;
         }
 
-        .footer-arrow {
-            position: absolute;
-            top: 1rem;
-        }
-
-        h2 {
-            border-bottom: var(--dashed);
-            padding-bottom: 0.5rem;
-            color: var(--homepage-color-3);
-            font-size: 0.8rem;
-            font-weight: 300;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-top: 2rem;
-        }
-
-        a {
-            transition: all 0.2s ease-in-out;
-        }
-
-        a:hover {
-            color: var(--hover);
+        .vision {
+            text-align: right;
+            flex: 1;
         }
     }
+}
 
-    .footer-footer {
-        display: flex;
-        height: 10vh;
-        background-color: var(--homepage-transparent-2);
+.homepage-footer {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    background-color: var(--homepage-transparent-1);
+    padding: 10vh 15vw;
+    font-size: 0.75rem;
+    position: relative;
+
+    div {
+        flex: 1;
+    }
+
+    .footer-arrow {
+        position: absolute;
+        top: 1rem;
+    }
+
+    h2 {
+        border-bottom: var(--dashed);
+        padding-bottom: 0.5rem;
+        color: var(--homepage-color-3);
         font-size: 0.8rem;
-        justify-content: center;
+        font-weight: 300;
+    }
 
-        .about {
-            display: flex;
-            align-items: center;
-        }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 2rem;
+    }
 
-        .about > a::after {
-            all: revert;
-        }
+    a {
+        transition: all 0.2s ease-in-out;
+    }
 
-        .about > a:hover::after {
-            all: revert;
-        }
+    a:hover {
+        color: var(--hover);
+    }
+}
 
-        .github-icon {
-            height: 25px;
-            padding-left: 10px;
-            padding: 0 10px;
-            transition: transform 1s ease-in-out;
-        }
+.footer-footer {
+    display: flex;
+    height: 10vh;
+    background-color: var(--homepage-transparent-2);
+    font-size: 0.8rem;
+    justify-content: center;
 
-        .github-icon:hover {
-            transform: rotate(360deg);
-        }
+    .about {
+        display: flex;
+        align-items: center;
+    }
 
-        a {
-            transition: all 0.2s ease-in-out;
-        }
+    .about > a::after {
+        all: revert;
+    }
 
-        a:hover {
-            color: var(--hover);
-        }
+    .about > a:hover::after {
+        all: revert;
+    }
+
+    .github-icon {
+        height: 25px;
+        padding-left: 10px;
+        padding: 0 10px;
+        transition: transform 1s ease-in-out;
+    }
+
+    .github-icon:hover {
+        transform: rotate(360deg);
+    }
+
+    a {
+        transition: all 0.2s ease-in-out;
+    }
+
+    a:hover {
+        color: var(--hover);
     }
 }
 
