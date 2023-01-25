@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,8 +15,8 @@ const Nav = () => {
                 <span className="slogan">Where technology meets color.</span>
             </div>
             <div className="navbar-right">
-                <NavLink to="/shop">Shop</NavLink>
-                <NavLink to="/about">About</NavLink>
+                <Link to="/shop/all">SHOP</Link>
+                <Link to="/about">ABOUT</Link>
                 <button className="btn">
                     <FontAwesomeIcon icon={faCartShopping} />
                 </button>

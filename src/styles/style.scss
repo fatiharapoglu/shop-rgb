@@ -104,6 +104,8 @@ body {
 
         a {
             transition: all 0.2s ease-in-out;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
 
         a:hover {
@@ -199,9 +201,41 @@ body {
     }
 }
 
-.about-container {
+.shop-wrapper {
+    padding: 7.5rem 5rem;
+    min-height: 80vh;
+    display: flex;
+
+    .shop-aside {
+        flex: 1;
+        padding: 0 2rem;
+        text-align: right;
+
+        h2 {
+            padding-bottom: 1.5rem;
+            font-weight: 100;
+            letter-spacing: 3px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    .shop-main {
+        flex: 4;
+        padding: 2rem;
+        border: var(--dashed);
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.about-wrapper {
     padding: 7.5rem;
-    height: 80vh;
+    min-height: 80vh;
 
     h1 {
         padding-bottom: 2rem;

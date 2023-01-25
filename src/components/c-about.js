@@ -6,14 +6,15 @@ const About = () => {
     return (
         <>
             <Nav />
-            <div className="about-container">
+            <div className="about-wrapper">
                 <h1>RGBPC</h1>
                 <p>
                     This website is created with React by Fatih Arapoğlu. This is not a real
-                    shopping site. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Blanditiis tempora saepe eveniet perferendis aut corporis quisquam, aspernatur
-                    fugit repudiandae, repellendus ab vel quod pariatur qui nam? Aliquid inventore
-                    illo ea.
+                    shopping site. Most links will not work correctly as they are there for only
+                    visuals. Checkout system also will not work since this is not a real website.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis tempora
+                    saepe eveniet perferendis aut corporis quisquam, aspernatur fugit repudiandae,
+                    repellendus ab vel quod pariatur qui nam? Aliquid inventore illo ea.
                 </p>
                 <div className="vision-mission">
                     <div className="vision">

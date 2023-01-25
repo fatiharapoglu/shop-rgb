@@ -1,11 +1,59 @@
 import React from "react";
 import Nav from "./m-nav";
+import { NavLink, Route, Routes } from "react-router-dom";
+import ShopAll from "./shop/c-all";
+import ShopMobo from "./shop/c-mobo";
+import ShopGPU from "./shop/c-gpu";
+import ShopCPU from "./shop/c-cpu";
+import ShopRAM from "./shop/c-ram";
+import ShopCooling from "./shop/c-cooling";
+import ShopAccessories from "./shop/c-accessories";
+import Footer from "./m-footer";
 
 const Shop = () => {
     return (
         <>
             <Nav />
-            <div> Shop </div>
+            <div className="shop-wrapper">
+                <aside className="shop-aside">
+                    <h2>CATEGORIES</h2>
+                    <ul>
+                        <li>
+                            <NavLink to="/shop/all">All Products</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/shop/mobo">Motherboards</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/shop/gpu">Graphic Cards</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/shop/cpu">Processors</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/shop/ram">RAMs</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/shop/cooling">Cooling</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/shop/accessories">Accessories</NavLink>
+                        </li>
+                    </ul>
+                </aside>
+                <main className="shop-main">
+                    <Routes>
+                        <Route path="/all" element={<ShopAll />} />
+                        <Route path="/mobo" element={<ShopMobo />} />
+                        <Route path="/gpu" element={<ShopGPU />} />
+                        <Route path="/cpu" element={<ShopCPU />} />
+                        <Route path="/ram" element={<ShopRAM />} />
+                        <Route path="/cooling" element={<ShopCooling />} />
+                        <Route path="/accessories" element={<ShopAccessories />} />
+                    </Routes>
+                </main>
+            </div>
+            <Footer />
         </>
     );
 };
