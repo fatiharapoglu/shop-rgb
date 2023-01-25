@@ -11,7 +11,7 @@
     --homepage-color-3: beige;
     --homepage-transparent-1: rgba(0, 0, 0, 0.5);
     --homepage-transparent-2: rgba(0, 0, 0, 0.75);
-    --border: 1px solid black;
+    --border: 1px solid rgb(46, 46, 46);
     --dashed: 1px dashed #303030;
 }
 
@@ -227,17 +227,45 @@ body {
 
     .shop-main {
         flex: 4;
-        padding: 2rem;
-        border: var(--dashed);
+        padding-left: 2rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
 
         .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
             width: clamp(250px, 30vw, 600px);
+            border: var(--dashed);
+            padding: 2rem 1rem 1rem;
+            text-align: center;
+            gap: 1rem;
 
             img {
-                max-width: 200px;
+                width: clamp(200px, 25vw, 400px);
+                aspect-ratio: 1;
+            }
+
+            .currency {
+                color: var(--hover);
+            }
+
+            .btn {
+                background-color: inherit;
+                color: var(--homepage-color-1);
+                font-size: inherit;
+                border: var(--border);
+                padding: 0.75rem 2rem;
+                width: 100%;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .btn:hover {
+                color: var(--hover);
+                background-color: var(--homepage-color-3);
             }
         }
     }

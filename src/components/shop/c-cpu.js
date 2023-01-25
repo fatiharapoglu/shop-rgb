@@ -6,14 +6,17 @@ const ShopCPU = () => {
         <>
             {products.cpus.map((cpu) => {
                 return (
-                    <div key={cpu.id}>
+                    <div key={cpu.id} className="product">
                         <img src={cpu.image} alt="cpu" />
                         <h2>{cpu.name}</h2>
-                        <h1>
-                            {cpu.price}
-                            <span className="currency">₺</span>
-                        </h1>
                         <p>{cpu.description}</p>
+                        <h1>
+                            <span className="price">{cpu.price.toLocaleString("tr-TR")}</span>
+                            <span className="currency"> ₺</span>
+                        </h1>
+                        <button id={cpu.id} className="btn">
+                            Add to basket
+                        </button>
                     </div>
                 );
             })}

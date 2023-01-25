@@ -36,9 +36,6 @@ const Footer = () => {
                             <a href="#">Storage Units</a>
                         </li>
                         <li>
-                            <a href="#">Cooling</a>
-                        </li>
-                        <li>
                             <a href="#">Accessories</a>
                         </li>
                     </ul>

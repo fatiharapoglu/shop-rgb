@@ -6,7 +6,6 @@ import ShopMobo from "./shop/c-mobo";
 import ShopGPU from "./shop/c-gpu";
 import ShopCPU from "./shop/c-cpu";
 import ShopRAM from "./shop/c-ram";
-import ShopCooling from "./shop/c-cooling";
 import ShopAccessories from "./shop/c-accessories";
 import Footer from "./m-footer";
 
@@ -34,9 +33,6 @@ const Shop = () => {
                             <NavLink to="/shop/ram">RAMs</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop/cooling">Cooling</NavLink>
-                        </li>
-                        <li>
                             <NavLink to="/shop/accessories">Accessories</NavLink>
                         </li>
                     </ul>
@@ -48,7 +44,6 @@ const Shop = () => {
                         <Route path="/gpu" element={<ShopGPU />} />
                         <Route path="/cpu" element={<ShopCPU />} />
                         <Route path="/ram" element={<ShopRAM />} />
-                        <Route path="/cooling" element={<ShopCooling />} />
                         <Route path="/accessories" element={<ShopAccessories />} />
                     </Routes>
                 </main>

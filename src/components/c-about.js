@@ -19,7 +19,7 @@ const About = () => {
                 <div className="vision-mission">
                     <div className="vision">
                         <h2>VISION</h2>
-                        <p>Only high end. Only RGB.</p>
+                        <p>Only selected & high end. Only RGB.</p>
                     </div>
                     <div className="mission">
                         <h2>MISSION</h2>

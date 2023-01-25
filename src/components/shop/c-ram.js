@@ -9,11 +9,14 @@ const ShopRAM = () => {
                     <div key={ram.id} className="product">
                         <img src={ram.image} alt="ram" />
                         <h2>{ram.name}</h2>
-                        <h1>
-                            {ram.price}
-                            <span className="currency">₺</span>
-                        </h1>
                         <p>{ram.description}</p>
+                        <h1>
+                            <span className="price">{ram.price.toLocaleString("tr-TR")}</span>
+                            <span className="currency"> ₺</span>
+                        </h1>
+                        <button id={ram.id} className="btn">
+                            Add to basket
+                        </button>
                     </div>
                 );
             })}

@@ -6,13 +6,17 @@ const ShopGPU = () => {
         <>
             {products.gpus.map((gpu) => {
                 return (
-                    <div>
+                    <div key={gpu.id} className="product">
                         <img src={gpu.image} alt="gpu" />
                         <h2>{gpu.name}</h2>
-                        <h1>
-                            {gpu.price} <span className="currency">₺</span>
-                        </h1>
                         <p>{gpu.description}</p>
+                        <h1>
+                            <span className="price">{gpu.price.toLocaleString("tr-TR")}</span>
+                            <span className="currency"> ₺</span>
+                        </h1>
+                        <button id={gpu.id} className="btn">
+                            Add to basket
+                        </button>
                     </div>
                 );
             })}
