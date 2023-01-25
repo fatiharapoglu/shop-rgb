@@ -190,12 +190,11 @@ body {
 
             img {
                 width: 400px;
-                transition: all 0.5s ease-in-out;
+                transition: all 0.25s ease-in-out;
             }
 
             img:hover {
-                scale: 1.1;
-                cursor: pointer;
+                scale: 1.05;
             }
         }
     }
@@ -307,4 +306,21 @@ body {
     100% {
         color: red;
     }
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(15, 15, 15);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--hover);
 }

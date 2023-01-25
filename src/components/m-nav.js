@@ -5,7 +5,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
     return (
-        <header className="navbar">
+        <nav className="navbar">
             <div className="navbar-left">
                 <Link to="/">
                     <span className="brand">
@@ -21,7 +21,7 @@ const Nav = () => {
                     <FontAwesomeIcon icon={faCartShopping} />
                 </button>
             </div>
-        </header>
+        </nav>
     );
 };
 
