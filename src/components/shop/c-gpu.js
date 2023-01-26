@@ -1,7 +1,13 @@
 import React from "react";
 import products from "../c-products";
 
-const ShopGPU = () => {
+const ShopGPU = (props) => {
+    const findProduct = (e) => {
+        const product = products.gpus.find((gpu) => gpu.id === Number(e.target.id));
+        if (props.basketList.find((gpu) => gpu === product)) return;
+        props.handleBasketChange(product);
+    };
+
     return (
         <>
             {products.gpus.map((gpu) => {
@@ -13,7 +19,13 @@ const ShopGPU = () => {
                         <h1>
                             <span className="price">{gpu.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={gpu.id} className="btn">
+                        <button
+                            id={gpu.id}
+                            className="btn"
+                            onClick={(e) => {
+                                findProduct(e);
+                            }}
+                        >
                             Add to basket
                         </button>
                     </div>

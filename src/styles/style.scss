@@ -237,15 +237,18 @@ body {
             justify-content: space-between;
             align-items: center;
             width: clamp(200px, 30vw, 400px);
-            border: var(--dashed);
+            border: var(--border);
+            border-radius: 1rem;
             padding: 2rem 1rem 1rem;
             text-align: center;
             gap: 1rem;
+            background-color: var(--homepage-transparent-1);
 
             img {
                 width: clamp(200px, 15vw, 250px);
                 aspect-ratio: 1;
                 object-fit: scale-down;
+                margin-bottom: 1rem;
             }
 
             h2 {
@@ -255,14 +258,14 @@ body {
 
             .price {
                 font-weight: 400;
-                position: relative;
             }
 
             .price::after {
                 content: "₺";
                 font-size: 1.5rem;
-                padding-left: 10px;
+                padding-left: 0.5rem;
                 color: var(--hover);
+                vertical-align: middle;
             }
 
             p {
@@ -274,7 +277,8 @@ body {
                 background-color: inherit;
                 color: var(--homepage-color-1);
                 font-size: inherit;
-                border: var(--border);
+                border: var(--dashed);
+                border-radius: 1rem;
                 padding: 0.75rem 2rem;
                 width: 100%;
                 cursor: pointer;
@@ -284,6 +288,14 @@ body {
             .btn:hover {
                 color: var(--hover);
                 background-color: var(--homepage-color-3);
+            }
+
+            .btn::before {
+                content: "+";
+                font-weight: bolder;
+                font-size: 1.5rem;
+                vertical-align: middle;
+                padding-right: 0.5rem;
             }
         }
     }
@@ -413,6 +425,87 @@ body {
 
     a:hover {
         color: var(--hover);
+    }
+}
+
+.basket {
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-width: 500px;
+    width: 30vw;
+    min-height: 100vh;
+    border: var(--border);
+    padding: 2rem;
+    background-color: black;
+    z-index: 5;
+
+    > h1 {
+        text-align: center;
+        padding-bottom: 0.5rem;
+        border-bottom: var(--dashed);
+    }
+
+    .price {
+        font-weight: 300;
+    }
+
+    .price::after {
+        content: "₺";
+        font-size: 1rem;
+        padding-left: 0.25rem;
+        color: var(--hover);
+    }
+
+    .basket-content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        gap: 1rem;
+        height: 75vh;
+        overflow: auto;
+
+        .basket-product {
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: var(--dashed);
+            padding: 0.5rem;
+            height: 100px;
+
+            img {
+                width: 75px;
+            }
+
+            h2 {
+                font-weight: 200;
+            }
+        }
+    }
+
+    .basket-total {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        text-align: center;
+        transform: translateX(-50%);
+    }
+
+    .btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: inherit;
+        color: var(--homepage-color-1);
+        font-size: inherit;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+        scale: 1.5;
     }
 }
 

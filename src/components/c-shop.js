@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "./m-nav";
 import { NavLink, Route, Routes } from "react-router-dom";
 import ShopAll from "./shop/c-all";
@@ -10,9 +10,15 @@ import ShopAccessories from "./shop/c-accessories";
 import Footer from "./m-footer";
 
 const Shop = () => {
+    const [basketList, setBasketList] = useState([]);
+
+    const handleBasketChange = (newItem) => {
+        setBasketList([...basketList, newItem]);
+    };
+
     return (
         <>
-            <Nav />
+            <Nav basketList={basketList} />
             <div className="shop-wrapper">
                 <aside className="shop-aside">
                     <h2>CATEGORIES</h2>
@@ -41,7 +47,15 @@ const Shop = () => {
                     <Routes>
                         <Route path="/all" element={<ShopAll />} />
                         <Route path="/mobo" element={<ShopMobo />} />
-                        <Route path="/gpu" element={<ShopGPU />} />
+                        <Route
+                            path="/gpu"
+                            element={
+                                <ShopGPU
+                                    basketList={basketList}
+                                    handleBasketChange={handleBasketChange}
+                                />
+                            }
+                        />
                         <Route path="/cpu" element={<ShopCPU />} />
                         <Route path="/ram" element={<ShopRAM />} />
                         <Route path="/accessories" element={<ShopAccessories />} />
