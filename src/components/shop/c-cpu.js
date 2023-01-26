@@ -12,7 +12,6 @@ const ShopCPU = () => {
                         <p>{cpu.description}</p>
                         <h1>
                             <span className="price">{cpu.price.toLocaleString("tr-TR")}</span>
-                            <span className="currency"> ₺</span>
                         </h1>
                         <button id={cpu.id} className="btn">
                             Add to basket

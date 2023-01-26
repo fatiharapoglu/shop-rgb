@@ -12,7 +12,6 @@ const ShopRAM = () => {
                         <p>{ram.description}</p>
                         <h1>
                             <span className="price">{ram.price.toLocaleString("tr-TR")}</span>
-                            <span className="currency"> ₺</span>
                         </h1>
                         <button id={ram.id} className="btn">
                             Add to basket

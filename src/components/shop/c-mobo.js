@@ -12,7 +12,6 @@ const ShopMobo = () => {
                         <p>{mobo.description}</p>
                         <h1>
                             <span className="price">{mobo.price.toLocaleString("tr-TR")}</span>
-                            <span className="currency"> ₺</span>
                         </h1>
                         <button id={mobo.id} className="btn">
                             Add to basket

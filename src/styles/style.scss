@@ -146,7 +146,7 @@ body {
         justify-content: center;
         align-items: center;
         min-height: 500px;
-        height: 80vh;
+        height: 77.5vh;
         padding: 7.5rem;
         gap: 5rem;
 
@@ -203,7 +203,6 @@ body {
 
 .shop-wrapper {
     padding: 7.5rem 5rem;
-    min-height: 80vh;
     display: flex;
 
     .shop-aside {
@@ -237,19 +236,38 @@ body {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: clamp(250px, 30vw, 600px);
+            width: clamp(200px, 30vw, 400px);
             border: var(--dashed);
             padding: 2rem 1rem 1rem;
             text-align: center;
             gap: 1rem;
 
             img {
-                width: clamp(200px, 25vw, 400px);
+                width: clamp(200px, 15vw, 250px);
                 aspect-ratio: 1;
+                object-fit: scale-down;
             }
 
-            .currency {
+            h2 {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            .price {
+                font-weight: 400;
+                position: relative;
+            }
+
+            .price::after {
+                content: "₺";
+                font-size: 1.5rem;
+                padding-left: 10px;
                 color: var(--hover);
+            }
+
+            p {
+                font-size: 0.75rem;
+                font-weight: 300;
             }
 
             .btn {
@@ -273,7 +291,7 @@ body {
 
 .about-wrapper {
     padding: 15vh 15vw;
-    min-height: 80vh;
+    min-height: 77.5vh;
 
     h1 {
         padding-bottom: 2rem;

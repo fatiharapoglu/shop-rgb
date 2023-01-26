@@ -12,7 +12,6 @@ const ShopGPU = () => {
                         <p>{gpu.description}</p>
                         <h1>
                             <span className="price">{gpu.price.toLocaleString("tr-TR")}</span>
-                            <span className="currency"> ₺</span>
                         </h1>
                         <button id={gpu.id} className="btn">
                             Add to basket

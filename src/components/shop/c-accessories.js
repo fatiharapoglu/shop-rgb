@@ -12,7 +12,6 @@ const ShopAccessories = () => {
                         <p>{accessory.description}</p>
                         <h1>
                             <span className="price">{accessory.price.toLocaleString("tr-TR")}</span>
-                            <span className="currency"> ₺</span>
                         </h1>
                         <button id={accessory.id} className="btn">
                             Add to basket
