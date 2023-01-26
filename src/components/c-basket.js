@@ -4,19 +4,16 @@ const Basket = (props) => {
     const [total, setTotal] = useState(0);
 
     useEffect(() => {
-        props.basketList.forEach((item) => {
-            handleTotalChange(item.price);
+        setTotal(0);
+        props.basketList.map((item) => {
+            setTotal((previous) => previous + item.price);
         });
     }, [props.basketList]);
-
-    const handleTotalChange = (newPrice) => {
-        setTotal(total + newPrice);
-    };
 
     return (
         <>
             <div className="basket">
-                <h1>Your Basket</h1>
+                <h1>YOUR BASKET</h1>
                 <div className="basket-content">
                     {props.basketList.map((item) => {
                         return (
@@ -30,14 +27,27 @@ const Basket = (props) => {
                                         </span>
                                     </h1>
                                 </div>
+                                <div className="counter">
+                                    <button className="counter-btn">-</button>
+                                    {item.counter || 1}
+                                    <button className="counter-btn">+</button>
+                                </div>
+                                <button
+                                    data-id={item.id}
+                                    className="remove-btn"
+                                    onClick={props.handleRemoveBtn}
+                                >
+                                    x
+                                </button>
                             </div>
                         );
                     })}
                 </div>
                 <div className="basket-total">
-                    <h2>Total</h2>
+                    <h2>TOTAL</h2>
                     <span className="price">{total.toLocaleString("tr-TR")}</span>
                 </div>
+                <button className="proceed-btn">Proceed to Checkout</button>
                 <button className="btn" onClick={props.handleCloseBtn}>
                     x
                 </button>

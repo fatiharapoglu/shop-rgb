@@ -157,7 +157,8 @@ body {
             justify-content: center;
             gap: 1rem;
             flex: 1.25;
-            color: var(--homepage-color-3);
+            transform: skew(0deg, 345deg);
+            text-shadow: -20px -20px 5px var(--homepage-transparent-2);
 
             .btn {
                 background-color: inherit;
@@ -443,7 +444,9 @@ body {
     > h1 {
         text-align: center;
         padding-bottom: 0.5rem;
-        border-bottom: var(--dashed);
+        font-weight: 300;
+        letter-spacing: 3px;
+        font-size: 1.25rem;
     }
 
     .price {
@@ -460,9 +463,10 @@ body {
     .basket-content {
         display: flex;
         flex-direction: column;
-        padding-top: 2rem;
+        padding: 2rem 0;
         gap: 1rem;
         height: 75vh;
+        min-height: 500px;
         overflow: auto;
 
         .basket-product {
@@ -471,25 +475,73 @@ body {
             align-items: center;
             gap: 1rem;
             border: var(--dashed);
+            border-radius: 1rem;
             padding: 0.5rem;
-            height: 100px;
+            position: relative;
 
             img {
                 width: 75px;
+                aspect-ratio: 1;
+                object-fit: scale-down;
             }
 
             h2 {
                 font-weight: 200;
             }
+
+            .remove-btn {
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                background-color: inherit;
+                color: var(--homepage-color-1);
+                font-size: 1.25rem;
+                border: none;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .remove-btn:hover {
+                color: var(--hover);
+            }
+
+            .counter {
+                position: absolute;
+                right: 3rem;
+            }
+
+            .counter-btn {
+                background-color: inherit;
+                color: var(--homepage-color-1);
+                border-radius: 1rem;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .counter-btn:hover {
+                color: var(--hover);
+            }
         }
     }
 
     .basket-total {
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        text-align: center;
-        transform: translateX(-50%);
+        padding-bottom: 1.5rem;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            padding-bottom: 0.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            font-size: 1.25rem;
+        }
     }
 
     .btn {
@@ -498,14 +550,32 @@ body {
         right: 1rem;
         background-color: inherit;
         color: var(--homepage-color-1);
-        font-size: inherit;
+        font-size: 2rem;
         border: none;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
     }
 
     .btn:hover {
-        scale: 1.5;
+        scale: 1.25;
+        color: var(--hover);
+    }
+
+    .proceed-btn {
+        background-color: inherit;
+        color: var(--homepage-color-1);
+        font-size: inherit;
+        border: var(--dashed);
+        border-radius: 1rem;
+        padding: 0.75rem 2rem;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .proceed-btn:hover {
+        color: var(--hover);
+        background-color: var(--homepage-color-3);
     }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Nav from "./m-nav";
 import { NavLink, Route, Routes } from "react-router-dom";
 import ShopAll from "./shop/c-all";
@@ -9,16 +9,14 @@ import ShopRAM from "./shop/c-ram";
 import ShopAccessories from "./shop/c-accessories";
 import Footer from "./m-footer";
 
-const Shop = () => {
-    const [basketList, setBasketList] = useState([]);
-
+const Shop = (props) => {
     const handleBasketChange = (newItem) => {
-        setBasketList([...basketList, newItem]);
+        props.setBasketList([...props.basketList, newItem]);
     };
 
     return (
         <>
-            <Nav basketList={basketList} />
+            <Nav basketList={props.basketList} handleRemoveBtn={props.handleRemoveBtn} />
             <div className="shop-wrapper">
                 <aside className="shop-aside">
                     <h2>CATEGORIES</h2>
@@ -51,7 +49,7 @@ const Shop = () => {
                             path="/gpu"
                             element={
                                 <ShopGPU
-                                    basketList={basketList}
+                                    basketList={props.basketList}
                                     handleBasketChange={handleBasketChange}
                                 />
                             }

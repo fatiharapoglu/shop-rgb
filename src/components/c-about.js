@@ -2,10 +2,10 @@ import React from "react";
 import Footer from "./m-footer";
 import Nav from "./m-nav";
 
-const About = () => {
+const About = (props) => {
     return (
         <>
-            <Nav />
+            <Nav basketList={props.basketList} handleRemoveBtn={props.handleRemoveBtn} />
             <div className="about-wrapper">
                 <h1>ABOUT RGBPC®</h1>
                 <p>

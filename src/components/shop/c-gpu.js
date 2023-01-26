@@ -19,13 +19,7 @@ const ShopGPU = (props) => {
                         <h1>
                             <span className="price">{gpu.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button
-                            id={gpu.id}
-                            className="btn"
-                            onClick={(e) => {
-                                findProduct(e);
-                            }}
-                        >
+                        <button id={gpu.id} className="btn" onClick={findProduct}>
                             Add to basket
                         </button>
                     </div>

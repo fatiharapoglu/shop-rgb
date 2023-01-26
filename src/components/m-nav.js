@@ -33,7 +33,11 @@ const Nav = (props) => {
                 </button>
             </div>
             {isCartActive && (
-                <Basket handleCloseBtn={handleCloseBtn} basketList={props.basketList} />
+                <Basket
+                    handleCloseBtn={handleCloseBtn}
+                    basketList={props.basketList}
+                    handleRemoveBtn={props.handleRemoveBtn}
+                />
             )}
         </nav>
     );

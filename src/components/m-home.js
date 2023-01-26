@@ -5,16 +5,16 @@ import Footer from "./m-footer";
 import rtx from "../assets/4090.png";
 import Nav from "./m-nav";
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div className="homepage">
-            <Nav />
+            <Nav basketList={props.basketList} handleRemoveBtn={props.handleRemoveBtn} />
             <main className="homepage-main-wrapper">
                 <div className="homepage-main">
                     <h1>GeForce RTX 40 Series</h1>
                     <h2>BEYOND FAST</h2>
                     <p>NVIDIA® GeForce RTX™ 40 Series GPUs are now available.</p>
-                    <NavLink to="/shop">
+                    <NavLink to="/shop/all">
                         <button className="btn">See All Products</button>
                     </NavLink>
                 </div>
