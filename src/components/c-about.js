@@ -1,11 +1,8 @@
 import React from "react";
-import Footer from "./m-footer";
-import Nav from "./m-nav";
 
-const About = (props) => {
+const About = () => {
     return (
         <>
-            <Nav basketList={props.basketList} setBasketList={props.setBasketList} />
             <div className="about-wrapper">
                 <h1>ABOUT RGBPC®</h1>
                 <p>
@@ -27,7 +24,6 @@ const About = (props) => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 };

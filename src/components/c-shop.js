@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "./m-nav";
 import { NavLink, Route, Routes } from "react-router-dom";
 import ShopAll from "./shop/c-all";
 import ShopMobo from "./shop/c-mobo";
@@ -7,7 +6,6 @@ import ShopGPU from "./shop/c-gpu";
 import ShopCPU from "./shop/c-cpu";
 import ShopRAM from "./shop/c-ram";
 import ShopAccessories from "./shop/c-accessories";
-import Footer from "./m-footer";
 
 const Shop = (props) => {
     const handleBasketChange = (newItem) => {
@@ -18,7 +16,6 @@ const Shop = (props) => {
 
     return (
         <>
-            <Nav basketList={props.basketList} setBasketList={props.setBasketList} />
             <div className="shop-wrapper">
                 <aside className="shop-aside">
                     <h2>CATEGORIES</h2>
@@ -72,7 +69,6 @@ const Shop = (props) => {
                     </Routes>
                 </main>
             </div>
-            <Footer />
         </>
     );
 };

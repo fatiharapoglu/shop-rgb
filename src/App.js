@@ -3,12 +3,15 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/m-home";
 import Shop from "./components/c-shop";
 import About from "./components/c-about";
+import Nav from "./components/m-nav";
+import Footer from "./components/m-footer";
 
 const App = () => {
     const [basketList, setBasketList] = useState([]);
 
     return (
-        <div className="container">
+        <>
+            <Nav basketList={basketList} setBasketList={setBasketList} />
             <Routes>
                 <Route
                     path="/"
@@ -23,7 +26,8 @@ const App = () => {
                     element={<About basketList={basketList} setBasketList={setBasketList} />}
                 />
             </Routes>
-        </div>
+            <Footer />
+        </>
     );
 };
 
