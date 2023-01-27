@@ -124,6 +124,18 @@ body {
         .btn:hover {
             color: var(--hover);
         }
+
+        .basket-counter {
+            background-color: var(--hover);
+            color: var(--background-primary);
+            border-radius: 50%;
+            display: inline-flex;
+            width: 1rem;
+            height: 1rem;
+            justify-content: center;
+            margin-left: 0.5rem;
+            font-weight: bold;
+        }
     }
 }
 

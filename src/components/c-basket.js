@@ -8,7 +8,7 @@ const Basket = (props) => {
         props.basketList.map((item) => {
             return setTotal((previous) => previous + item.price * item.counter);
         });
-    }, [props.basketList]);
+    }, [props]);
 
     const handleMinus = (e) => {
         let ID = e.target.parentNode.parentNode.lastChild.dataset.id;

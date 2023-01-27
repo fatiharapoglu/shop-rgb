@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
@@ -6,6 +6,11 @@ import Basket from "./c-basket";
 
 const Nav = (props) => {
     const [isCartActive, setIsCartActive] = useState(false);
+    const [cartLength, setCartLength] = useState(0);
+
+    useEffect(() => {
+        setCartLength(props.basketList.length);
+    }, [props]);
 
     const handleRemoveBtn = (e) => {
         const newList = props.basketList.filter((item) => item.id !== Number(e.target.dataset.id));
@@ -35,6 +40,7 @@ const Nav = (props) => {
                 <Link to="/about">ABOUT</Link>
                 <button className="btn" onClick={handleBasketClick}>
                     <FontAwesomeIcon icon={faCartShopping} />
+                    {cartLength !== 0 && <span className="basket-counter">{cartLength}</span>}
                 </button>
             </div>
             {isCartActive && (
@@ -43,6 +49,7 @@ const Nav = (props) => {
                     setBasketList={props.setBasketList}
                     handleCloseBtn={handleCloseBtn}
                     handleRemoveBtn={handleRemoveBtn}
+                    setCartLength={setCartLength}
                 />
             )}
         </nav>
