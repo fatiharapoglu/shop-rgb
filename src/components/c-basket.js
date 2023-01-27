@@ -4,10 +4,12 @@ const Basket = (props) => {
     const [total, setTotal] = useState(0);
 
     useEffect(() => {
-        setTotal(0);
-        props.basketList.map((item) => {
-            return setTotal((previous) => previous + item.price * item.counter);
+        let newTotal = 0;
+        props.basketList.forEach((item) => {
+            newTotal = newTotal + item.price * item.counter;
+            return newTotal;
         });
+        setTotal(newTotal);
     }, [props]);
 
     const handleMinus = (e) => {
