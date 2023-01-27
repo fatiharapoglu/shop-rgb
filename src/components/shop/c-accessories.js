@@ -1,7 +1,13 @@
 import React from "react";
 import products from "../c-products";
 
-const ShopAccessories = () => {
+const ShopAccessories = (props) => {
+    const findProduct = (e) => {
+        const product = products.accessories.find(
+            (accessory) => accessory.id === Number(e.target.id)
+        );
+        props.handleBasketChange(product);
+    };
     return (
         <>
             {products.accessories.map((accessory) => {
@@ -13,7 +19,7 @@ const ShopAccessories = () => {
                         <h1>
                             <span className="price">{accessory.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={accessory.id} className="btn">
+                        <button id={accessory.id} className="btn" onClick={findProduct}>
                             Add to basket
                         </button>
                     </div>

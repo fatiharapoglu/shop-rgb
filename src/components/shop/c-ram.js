@@ -1,7 +1,12 @@
 import React from "react";
 import products from "../c-products";
 
-const ShopRAM = () => {
+const ShopRAM = (props) => {
+    const findProduct = (e) => {
+        const product = products.rams.find((ram) => ram.id === Number(e.target.id));
+        props.handleBasketChange(product);
+    };
+
     return (
         <>
             {products.rams.map((ram) => {
@@ -13,7 +18,7 @@ const ShopRAM = () => {
                         <h1>
                             <span className="price">{ram.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={ram.id} className="btn">
+                        <button id={ram.id} className="btn" onClick={findProduct}>
                             Add to basket
                         </button>
                     </div>

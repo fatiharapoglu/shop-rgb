@@ -1,7 +1,11 @@
 import React from "react";
 import products from "../c-products";
 
-const ShopCPU = () => {
+const ShopCPU = (props) => {
+    const findProduct = (e) => {
+        const product = products.cpus.find((cpu) => cpu.id === Number(e.target.id));
+        props.handleBasketChange(product);
+    };
     return (
         <>
             {products.cpus.map((cpu) => {
@@ -13,7 +17,7 @@ const ShopCPU = () => {
                         <h1>
                             <span className="price">{cpu.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={cpu.id} className="btn">
+                        <button id={cpu.id} className="btn" onClick={findProduct}>
                             Add to basket
                         </button>
                     </div>

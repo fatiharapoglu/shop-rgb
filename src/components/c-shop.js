@@ -45,20 +45,30 @@ const Shop = (props) => {
                 </aside>
                 <main className="shop-main">
                     <Routes>
-                        <Route path="/all" element={<ShopAll />} />
-                        <Route path="/mobo" element={<ShopMobo />} />
+                        <Route
+                            path="/all"
+                            element={<ShopAll handleBasketChange={handleBasketChange} />}
+                        />
+                        <Route
+                            path="/mobo"
+                            element={<ShopMobo handleBasketChange={handleBasketChange} />}
+                        />
                         <Route
                             path="/gpu"
-                            element={
-                                <ShopGPU
-                                    basketList={props.basketList}
-                                    handleBasketChange={handleBasketChange}
-                                />
-                            }
+                            element={<ShopGPU handleBasketChange={handleBasketChange} />}
                         />
-                        <Route path="/cpu" element={<ShopCPU />} />
-                        <Route path="/ram" element={<ShopRAM />} />
-                        <Route path="/accessories" element={<ShopAccessories />} />
+                        <Route
+                            path="/cpu"
+                            element={<ShopCPU handleBasketChange={handleBasketChange} />}
+                        />
+                        <Route
+                            path="/ram"
+                            element={<ShopRAM handleBasketChange={handleBasketChange} />}
+                        />
+                        <Route
+                            path="/accessories"
+                            element={<ShopAccessories handleBasketChange={handleBasketChange} />}
+                        />
                     </Routes>
                 </main>
             </div>
