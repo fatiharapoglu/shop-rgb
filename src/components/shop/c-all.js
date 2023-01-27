@@ -1,7 +1,24 @@
 import React from "react";
 import products from "../c-products";
 
-const ShopAll = () => {
+const ShopAll = (props) => {
+    const findProduct = (e, tab) => {
+        let key;
+        if (tab === "mobo") {
+            key = "mobos";
+        } else if (tab === "gpu") {
+            key = "gpus";
+        } else if (tab === "cpu") {
+            key = "cpus";
+        } else if (tab === "ram") {
+            key = "rams";
+        } else if (tab === "accessory") {
+            key = "accessories";
+        }
+        const product = products[key].find((item) => item.id === Number(e.target.id));
+        props.handleBasketChange(product);
+    };
+
     return (
         <>
             {products.mobos.map((mobo) => {
@@ -13,7 +30,13 @@ const ShopAll = () => {
                         <h1>
                             <span className="price">{mobo.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={mobo.id} className="btn">
+                        <button
+                            id={mobo.id}
+                            className="btn"
+                            onClick={(e) => {
+                                findProduct(e, "mobo");
+                            }}
+                        >
                             Add to basket
                         </button>
                     </div>
@@ -28,7 +51,13 @@ const ShopAll = () => {
                         <h1>
                             <span className="price">{gpu.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={gpu.id} className="btn">
+                        <button
+                            id={gpu.id}
+                            className="btn"
+                            onClick={(e) => {
+                                findProduct(e, "gpu");
+                            }}
+                        >
                             Add to basket
                         </button>
                     </div>
@@ -43,7 +72,13 @@ const ShopAll = () => {
                         <h1>
                             <span className="price">{cpu.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={cpu.id} className="btn">
+                        <button
+                            id={cpu.id}
+                            className="btn"
+                            onClick={(e) => {
+                                findProduct(e, "cpu");
+                            }}
+                        >
                             Add to basket
                         </button>
                     </div>
@@ -58,7 +93,13 @@ const ShopAll = () => {
                         <h1>
                             <span className="price">{ram.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={ram.id} className="btn">
+                        <button
+                            id={ram.id}
+                            className="btn"
+                            onClick={(e) => {
+                                findProduct(e, "ram");
+                            }}
+                        >
                             Add to basket
                         </button>
                     </div>
@@ -73,7 +114,13 @@ const ShopAll = () => {
                         <h1>
                             <span className="price">{accessory.price.toLocaleString("tr-TR")}</span>
                         </h1>
-                        <button id={accessory.id} className="btn">
+                        <button
+                            id={accessory.id}
+                            className="btn"
+                            onClick={(e) => {
+                                findProduct(e, "accessory");
+                            }}
+                        >
                             Add to basket
                         </button>
                     </div>
