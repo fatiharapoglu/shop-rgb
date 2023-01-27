@@ -7,43 +7,20 @@ import About from "./components/c-about";
 const App = () => {
     const [basketList, setBasketList] = useState([]);
 
-    const handleRemoveBtn = (e) => {
-        const newList = basketList.filter((item) => item.id !== Number(e.target.dataset.id));
-        setBasketList(newList);
-    };
-
     return (
         <div className="container">
             <Routes>
                 <Route
                     path="/"
-                    element={
-                        <Home
-                            basketList={basketList}
-                            setBasketList={setBasketList}
-                            handleRemoveBtn={handleRemoveBtn}
-                        />
-                    }
+                    element={<Home basketList={basketList} setBasketList={setBasketList} />}
                 />
                 <Route
                     path="/shop/*"
-                    element={
-                        <Shop
-                            basketList={basketList}
-                            setBasketList={setBasketList}
-                            handleRemoveBtn={handleRemoveBtn}
-                        />
-                    }
+                    element={<Shop basketList={basketList} setBasketList={setBasketList} />}
                 />
                 <Route
                     path="/about"
-                    element={
-                        <About
-                            basketList={basketList}
-                            setBasketList={setBasketList}
-                            handleRemoveBtn={handleRemoveBtn}
-                        />
-                    }
+                    element={<About basketList={basketList} setBasketList={setBasketList} />}
                 />
             </Routes>
         </div>

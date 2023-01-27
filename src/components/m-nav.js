@@ -7,6 +7,11 @@ import Basket from "./c-basket";
 const Nav = (props) => {
     const [isCartActive, setIsCartActive] = useState(false);
 
+    const handleRemoveBtn = (e) => {
+        const newList = props.basketList.filter((item) => item.id !== Number(e.target.dataset.id));
+        props.setBasketList(newList);
+    };
+
     const handleBasketClick = () => {
         setIsCartActive(true);
     };
@@ -34,9 +39,10 @@ const Nav = (props) => {
             </div>
             {isCartActive && (
                 <Basket
-                    handleCloseBtn={handleCloseBtn}
                     basketList={props.basketList}
-                    handleRemoveBtn={props.handleRemoveBtn}
+                    setBasketList={props.setBasketList}
+                    handleCloseBtn={handleCloseBtn}
+                    handleRemoveBtn={handleRemoveBtn}
                 />
             )}
         </nav>

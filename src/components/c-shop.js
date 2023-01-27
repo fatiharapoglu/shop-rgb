@@ -16,7 +16,7 @@ const Shop = (props) => {
 
     return (
         <>
-            <Nav basketList={props.basketList} handleRemoveBtn={props.handleRemoveBtn} />
+            <Nav basketList={props.basketList} setBasketList={props.setBasketList} />
             <div className="shop-wrapper">
                 <aside className="shop-aside">
                     <h2>CATEGORIES</h2>

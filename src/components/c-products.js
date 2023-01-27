@@ -28,6 +28,7 @@ const products = {
             description: "Kingston 32GB (2x16GB) 6000MHz RGB DDR5 PC RAM",
             image: ram1,
             id: 1,
+            counter: 1,
         },
         {
             name: "GSkill 64GB DDR5",
@@ -36,6 +37,7 @@ const products = {
                 "GSkill 64GB (2X32GB) Trident Z5 Rgb 6400MHz CL32 DDR5 1.4V Black Dual Kit",
             image: ram2,
             id: 2,
+            counter: 1,
         },
         {
             name: "Corsair 32GB DDR5",
@@ -43,6 +45,7 @@ const products = {
             description: "Corsair 32GB (2x16GB) DDR5 5600MHz C36 Platinum RGB Dominator Black LPX",
             image: ram3,
             id: 3,
+            counter: 1,
         },
     ],
 
@@ -53,6 +56,7 @@ const products = {
             description: "Gigabyte RTX 4090 GAMING OC 24GB GDDR6X 384Bit RGB Nvidia",
             image: gpu1,
             id: 4,
+            counter: 1,
         },
         {
             name: "Galax RTX 4090 24GB",
@@ -60,6 +64,7 @@ const products = {
             description: "Galax RTX 4090 SG 24GB 384Bit GDDR6X PCIE 4.0",
             image: gpu4,
             id: 5,
+            counter: 1,
         },
         {
             name: "Asus RTX 4080 16GB",
@@ -68,6 +73,7 @@ const products = {
                 "Asus RTX 4080 ROG-STRIX-RTX4080-O16G-GAMING 16GB GDDR6X 256Bit OC 2xHDMI 3xDP RGB",
             image: gpu2,
             id: 6,
+            counter: 1,
         },
         {
             name: "Asus RTX 4070TI 12GB",
@@ -76,6 +82,7 @@ const products = {
                 "Asus RTX 4070TI TUF-RTX4070TI-12G-GAMING 12GB GDDR6X 192Bit 2640MHz 2xHDMI 3xDP RGB",
             image: gpu3,
             id: 7,
+            counter: 1,
         },
     ],
 
@@ -86,6 +93,7 @@ const products = {
             description: "Intel Core i9-12900K LGA1700 3.2Ghz Box",
             image: cpu1,
             id: 8,
+            counter: 1,
         },
         {
             name: "Intel i7 12700K",
@@ -93,6 +101,7 @@ const products = {
             description: "Intel Core i7-12700K 2.7GHz 12 Core 25MB Cache LGA1700",
             image: cpu2,
             id: 9,
+            counter: 1,
         },
         {
             name: "Intel i5 12600K",
@@ -100,6 +109,7 @@ const products = {
             description: "Intel Core i5-12600K 2.8GHz 10 Core 20MB Cache LGA1700",
             image: cpu3,
             id: 10,
+            counter: 1,
         },
         {
             name: "AMD Ryzen 9 7950X",
@@ -107,6 +117,7 @@ const products = {
             description: "AMD Ryzen 9 7950X 4.5GHz 16 Core 80MB Cache AM5",
             image: cpu4,
             id: 11,
+            counter: 1,
         },
         {
             name: "AMD Ryzen 9 7900X",
@@ -114,6 +125,7 @@ const products = {
             description: "AMD Ryzen 9 7900X 4.7GHz 12 Core 76MB Cache AM5",
             image: cpu4,
             id: 12,
+            counter: 1,
         },
         {
             name: "AMD Ryzen 7 7700X",
@@ -121,6 +133,7 @@ const products = {
             description: "AMD Ryzen 7 7700X 4.5GHz 8 Core 40MB Cache AM5",
             image: cpu5,
             id: 13,
+            counter: 1,
         },
         {
             name: "AMD Ryzen 5 7600X",
@@ -128,6 +141,7 @@ const products = {
             description: "AMD Ryzen 5 7600X 4.7GHz 6 Core 38MB Cache AM5",
             image: cpu6,
             id: 14,
+            counter: 1,
         },
     ],
 
@@ -139,6 +153,7 @@ const products = {
                 "ASUS TUF GAMING Z690-PLUS WIFI Intel Z690 LGA1700 DDR5 6000 MHz DP HDMI 4x M2 USB3.2 RGB ATX PCIe 5.0",
             image: mobo1,
             id: 15,
+            counter: 1,
         },
         {
             name: "MSI Meg X670E",
@@ -146,6 +161,7 @@ const products = {
             description: "MSI Meg X670E Ace AM5 DDR5 4x M.2 USB 3.2 10G LAN AMD WIFI 6e RGB EATX",
             image: mobo2,
             id: 16,
+            counter: 1,
         },
     ],
 
@@ -156,6 +172,7 @@ const products = {
             description: "Razer RZ03-03401300-R3L1 Cynosa V2 Chroma Membran TR Keyboard",
             image: acc1,
             id: 17,
+            counter: 1,
         },
         {
             name: "Corsair Gaming Glaive Mouse",
@@ -163,6 +180,7 @@ const products = {
             description: "Corsair Gaming Glaive RGB 16000DPI",
             image: acc2,
             id: 18,
+            counter: 1,
         },
         {
             name: "ASUS ROG Strix Scope Keyboard",
@@ -171,6 +189,7 @@ const products = {
                 "ASUS ROG Strix Scope RX Red Switch 1ms IP57 Waterproof RGB TR Optical Wired Mechanical Gaming Keyboard",
             image: acc3,
             id: 19,
+            counter: 1,
         },
         {
             name: "Corsair Virtuoso Headphones",
@@ -178,6 +197,7 @@ const products = {
             description: "Corsair Virtuoso RGB Wireless Gaming Headphones",
             image: acc4,
             id: 20,
+            counter: 1,
         },
         {
             name: "Corsair H100i Liquid Cooler",
@@ -185,6 +205,7 @@ const products = {
             description: "Corsair H100i RGB Platinum 240mm White Liquid Cooler",
             image: acc5,
             id: 21,
+            counter: 1,
         },
         {
             name: "Thermaltake Riing Trio Cooler",
@@ -192,6 +213,7 @@ const products = {
             description: "Thermaltake Riing Trio 14 RGB 3x140mm Fan",
             image: acc6,
             id: 22,
+            counter: 1,
         },
     ],
 };

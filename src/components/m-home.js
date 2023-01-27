@@ -8,7 +8,7 @@ import Nav from "./m-nav";
 const Home = (props) => {
     return (
         <div className="homepage">
-            <Nav basketList={props.basketList} handleRemoveBtn={props.handleRemoveBtn} />
+            <Nav basketList={props.basketList} setBasketList={props.setBasketList} />
             <main className="homepage-main-wrapper">
                 <div className="homepage-main">
                     <h1>GeForce RTX 40 Series</h1>

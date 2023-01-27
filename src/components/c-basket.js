@@ -10,6 +10,30 @@ const Basket = (props) => {
         });
     }, [props.basketList]);
 
+    const handleMinus = (e) => {
+        let ID = e.target.parentNode.parentNode.lastChild.dataset.id;
+        const item = props.basketList.find((item) => item.id === Number(ID));
+        if (item.counter === 1) return;
+        const newList = props.basketList.map((item) => {
+            if (item.id === Number(ID)) {
+                return { ...item, counter: item.counter - 1 };
+            }
+            return item;
+        });
+        props.setBasketList(newList);
+    };
+
+    const handlePlus = (e) => {
+        let ID = e.target.parentNode.parentNode.lastChild.dataset.id;
+        const newList = props.basketList.map((item) => {
+            if (item.id === Number(ID)) {
+                return { ...item, counter: item.counter + 1 };
+            }
+            return item;
+        });
+        props.setBasketList(newList);
+    };
+
     return (
         <>
             <div className="basket">
@@ -28,9 +52,13 @@ const Basket = (props) => {
                                     </h1>
                                 </div>
                                 <div className="counter">
-                                    <button className="counter-btn">-</button>
-                                    {item.counter || 1}
-                                    <button className="counter-btn">+</button>
+                                    <button onClick={handleMinus} className="counter-btn">
+                                        -
+                                    </button>
+                                    {item.counter}
+                                    <button onClick={handlePlus} className="counter-btn">
+                                        +
+                                    </button>
                                 </div>
                                 <button
                                     data-id={item.id}

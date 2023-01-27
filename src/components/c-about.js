@@ -5,7 +5,7 @@ import Nav from "./m-nav";
 const About = (props) => {
     return (
         <>
-            <Nav basketList={props.basketList} handleRemoveBtn={props.handleRemoveBtn} />
+            <Nav basketList={props.basketList} setBasketList={props.setBasketList} />
             <div className="about-wrapper">
                 <h1>ABOUT RGBPC®</h1>
                 <p>
