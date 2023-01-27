@@ -6,7 +6,7 @@ const Basket = (props) => {
     useEffect(() => {
         setTotal(0);
         props.basketList.map((item) => {
-            setTotal((previous) => previous + item.price);
+            return setTotal((previous) => previous + item.price * item.counter);
         });
     }, [props.basketList]);
 

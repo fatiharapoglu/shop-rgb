@@ -11,6 +11,8 @@ import Footer from "./m-footer";
 
 const Shop = (props) => {
     const handleBasketChange = (newItem) => {
+        const isDuplicate = props.basketList.find((item) => item.id === newItem.id);
+        if (isDuplicate !== undefined) return;
         props.setBasketList([...props.basketList, newItem]);
     };
 

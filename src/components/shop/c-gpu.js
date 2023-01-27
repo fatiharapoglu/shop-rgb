@@ -4,7 +4,6 @@ import products from "../c-products";
 const ShopGPU = (props) => {
     const findProduct = (e) => {
         const product = products.gpus.find((gpu) => gpu.id === Number(e.target.id));
-        if (props.basketList.find((gpu) => gpu === product)) return;
         props.handleBasketChange(product);
     };
 
