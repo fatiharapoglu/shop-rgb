@@ -8,6 +8,11 @@ import Footer from "./components/m-footer";
 
 const App = () => {
     const [basketList, setBasketList] = useState([]);
+    const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
+
+    const handleSnackbar = () => {
+        setIsSnackbarOpen(true);
+    };
 
     return (
         <>
