@@ -2,17 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-    --background-primary: #131313;
-    --hover: #fc9797;
-    --primary: #cde7ff;
+    --background-primary: #121212;
+    --hover: #13b29e;
+    --primary: #dcd7c9;
     --font-1: "Montserrat", sans-serif;
-    --homepage-color-1: #cde7ff;
-    --homepage-color-2: black;
-    --homepage-color-3: beige;
-    --homepage-transparent-1: rgba(0, 0, 0, 0.5);
-    --homepage-transparent-2: rgba(0, 0, 0, 0.75);
+    --homepage-color-2: #0d0d0d;
+    --homepage-color-3: #ffbc00;
+    --homepage-transparent-1: rgba(0, 0, 0, 0.25);
+    --homepage-transparent-2: rgba(0, 0, 0, 0.5);
     --border: 1px solid rgb(46, 46, 46);
-    --dashed: 1px dashed #303030;
+    --dashed: 1px dashed rgb(46, 46, 46);
 }
 
 * {
@@ -50,6 +49,10 @@ a:hover::after {
     transform-origin: bottom left;
 }
 
+button {
+    color: var(--primary);
+}
+
 body {
     min-height: 100vh;
     background-color: var(--background-primary);
@@ -73,9 +76,8 @@ body {
             animation: color-change 10s infinite;
 
             span {
-                color: var(--homepage-color-1);
                 font-size: 0.75rem;
-                font-weight: 300;
+                font-weight: 500;
                 letter-spacing: 0;
                 vertical-align: top;
             }
@@ -114,7 +116,6 @@ body {
 
         .btn {
             background-color: inherit;
-            color: var(--homepage-color-1);
             font-size: inherit;
             border: none;
             cursor: pointer;
@@ -134,7 +135,7 @@ body {
             height: 1.5rem;
             justify-content: center;
             margin-left: 0.5rem;
-            font-weight: bold;
+            font-weight: bolder;
             align-items: center;
         }
     }
@@ -172,12 +173,13 @@ body {
 
             .btn {
                 background-color: inherit;
-                color: var(--homepage-color-3);
                 border: none;
                 font-size: 1.25rem;
                 padding: 5px 10px;
                 cursor: pointer;
                 transition: color 0.2s ease-in-out;
+                color: var(--hover);
+                text-shadow: -20px -20px 5px var(--homepage-transparent-2);
             }
 
             .btn:hover {
@@ -186,6 +188,7 @@ body {
 
             h1 {
                 font-size: 3rem;
+                color: var(--homepage-color-3);
             }
 
             h2 {
@@ -223,7 +226,7 @@ body {
 
         h2 {
             padding-bottom: 1.5rem;
-            font-weight: 100;
+            font-weight: 200;
             letter-spacing: 3px;
             color: var(--homepage-color-3);
         }
@@ -232,6 +235,10 @@ body {
             display: flex;
             flex-direction: column;
             gap: 2rem;
+        }
+
+        a:hover {
+            color: var(--hover);
         }
     }
 
@@ -248,7 +255,6 @@ body {
             justify-content: space-between;
             align-items: center;
             width: clamp(200px, 30vw, 400px);
-            border: var(--border);
             padding: 2rem 1rem 1rem;
             text-align: center;
             gap: 1rem;
@@ -263,11 +269,13 @@ body {
 
             h2 {
                 font-size: 1rem;
-                font-weight: 500;
+                font-weight: 300;
+                color: var(--homepage-color-3);
             }
 
             .price {
                 font-weight: 400;
+                font-size: 1.75rem;
             }
 
             .price::after {
@@ -285,9 +293,7 @@ body {
 
             .btn {
                 background-color: inherit;
-                color: var(--homepage-color-1);
-                font-size: inherit;
-                border: var(--dashed);
+                border: none;
                 padding: 0.75rem 2rem;
                 width: 100%;
                 cursor: pointer;
@@ -295,8 +301,9 @@ body {
             }
 
             .btn:hover {
-                color: var(--hover);
-                background-color: var(--homepage-color-3);
+                color: var(--background-primary);
+                background-color: var(--hover);
+                font-weight: bold;
             }
 
             .btn::before {
@@ -318,8 +325,13 @@ body {
         padding-bottom: 2rem;
         color: var(--homepage-color-3);
         text-align: center;
-        font-weight: 100;
+        font-weight: 200;
         letter-spacing: 5px;
+    }
+
+    span {
+        font-size: 1rem;
+        vertical-align: super;
     }
 
     > p {
@@ -336,7 +348,7 @@ body {
             padding-bottom: 1rem;
             font-size: 1.5rem;
             color: var(--homepage-color-3);
-            font-weight: 100;
+            font-weight: 200;
             letter-spacing: 5px;
         }
 
@@ -374,11 +386,12 @@ body {
     }
 
     h2 {
-        border-bottom: var(--dashed);
+        border-bottom: 1px dashed rgb(86 86 86);
         padding-bottom: 0.5rem;
         color: var(--homepage-color-3);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 300;
+        letter-spacing: 1px;
     }
 
     ul {
@@ -430,6 +443,7 @@ body {
 
     a {
         transition: color 0.2s ease-in-out;
+        color: var(--homepage-color-3);
     }
 
     a:hover {
@@ -446,7 +460,7 @@ body {
     min-height: 100vh;
     border-left: var(--border);
     padding: 1.5rem;
-    background-color: black;
+    background-color: var(--homepage-color-2);
     z-index: 5;
 
     > h1 {
@@ -455,6 +469,7 @@ body {
         font-weight: 300;
         letter-spacing: 3px;
         font-size: 1.25rem;
+        color: var(--homepage-color-3);
     }
 
     .price {
@@ -463,7 +478,7 @@ body {
 
     .price::after {
         content: "₺";
-        font-size: 1rem;
+        font-size: 1.25rem;
         padding-left: 0.25rem;
         color: var(--hover);
     }
@@ -476,15 +491,22 @@ body {
         height: 75vh;
         min-height: 500px;
         overflow: auto;
+        box-shadow: inset 0px 0px 10px 0px var(--homepage-transparent-2);
 
         .basket-product {
             font-size: 0.65rem;
             display: flex;
             align-items: center;
             gap: 1rem;
-            border: var(--dashed);
             padding: 0.5rem;
             position: relative;
+
+            .basket-product-content {
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+                padding: 0.25rem 0 0;
+            }
 
             img {
                 width: 75px;
@@ -502,7 +524,7 @@ body {
                 right: 1rem;
                 transform: translateY(-50%);
                 background-color: inherit;
-                color: var(--homepage-color-1);
+                color: var(--homepage-color-3);
                 font-size: 1.25rem;
                 border: none;
                 cursor: pointer;
@@ -521,12 +543,12 @@ body {
                 span {
                     font-size: 1rem;
                     font-weight: 200;
+                    font-family: emoji;
                 }
             }
 
             .counter-btn {
                 background-color: inherit;
-                color: var(--homepage-color-1);
                 border: none;
                 font-size: 1.25rem;
                 cursor: pointer;
@@ -550,7 +572,7 @@ body {
                 position: relative;
                 padding-top: 1rem;
                 font-size: 10rem;
-                opacity: 50%;
+                color: var(--homepage-transparent-2);
             }
 
             div::after {
@@ -560,8 +582,9 @@ body {
                 top: 40%;
                 left: 52%;
                 transform: translate(-50%, -50%);
-                color: #606060;
                 letter-spacing: 1px;
+                color: var(--primary);
+                opacity: 0.25;
             }
         }
     }
@@ -580,6 +603,7 @@ body {
             font-weight: 300;
             letter-spacing: 3px;
             font-size: 1.25rem;
+            color: var(--homepage-color-3);
         }
 
         .price {
@@ -589,10 +613,10 @@ body {
 
     .btn {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 0.9rem;
+        right: 1.5rem;
         background-color: inherit;
-        color: var(--homepage-color-1);
+        color: var(--homepage-color-3);
         font-size: 2rem;
         border: none;
         cursor: pointer;
@@ -600,42 +624,45 @@ body {
     }
 
     .btn:hover {
-        scale: 1.25;
         color: var(--hover);
     }
 
     .proceed-btn {
-        background-color: inherit;
-        color: var(--homepage-color-1);
-        font-size: inherit;
-        border: var(--dashed);
+        background-color: var(--homepage-transparent-1);
+        border: none;
         padding: 0.75rem 2rem;
         width: 100%;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
     }
 
     .proceed-btn:hover {
-        color: var(--hover);
-        background-color: var(--homepage-color-3);
+        background-color: var(--hover);
+        color: var(--background-primary);
+        font-weight: bold;
     }
 }
 
 .active {
-    border-bottom: 1px solid var(--hover);
+    color: var(--hover);
 }
 
 .snackbar {
     min-width: 250px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--hover);
     text-align: center;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     position: fixed;
     z-index: 10;
     left: 50%;
     transform: translateX(-50%);
-    top: 20vh;
+    bottom: 10vh;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
@@ -659,24 +686,24 @@ body {
 
 @keyframes fadein {
     from {
-        top: 0;
+        bottom: 0;
         opacity: 0;
     }
 
     to {
-        top: 20vh;
+        bottom: 10vh;
         opacity: 1;
     }
 }
 
 @keyframes fadeout {
     from {
-        top: 20vh;
+        bottom: 10vh;
         opacity: 1;
     }
 
     to {
-        top: 0;
+        bottom: 0;
         opacity: 0;
     }
 }
@@ -686,7 +713,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgb(15, 15, 15);
+    background-color: var(--homepage-transparent-1);
 }
 
 ::-webkit-scrollbar-thumb {

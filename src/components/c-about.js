@@ -4,7 +4,9 @@ const About = () => {
     return (
         <>
             <div className="about-wrapper">
-                <h1>ABOUT RGBPC®</h1>
+                <h1>
+                    ABOUT RGBPC<span>®</span>
+                </h1>
                 <p>
                     This website is created with React by Fatih Arapoğlu. This is not a real
                     shopping site. Most links will not work correctly as they are there for only

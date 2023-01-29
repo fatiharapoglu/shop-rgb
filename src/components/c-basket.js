@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faCreditCard } from "@fortawesome/free-solid-svg-icons";
 
 const Basket = (props) => {
     const [total, setTotal] = useState(0);
@@ -54,7 +54,7 @@ const Basket = (props) => {
                         return (
                             <div key={item.id} className="basket-product">
                                 <img src={item.image} alt="basket-item" />
-                                <div>
+                                <div className="basket-product-content">
                                     <h2>{item.name}</h2>
                                     <h1>
                                         <span className="price">
@@ -94,7 +94,7 @@ const Basket = (props) => {
                         }
                     }}
                 >
-                    Proceed to Checkout
+                    <FontAwesomeIcon icon={faCreditCard} /> Proceed to Checkout
                 </button>
                 <button className="btn" onClick={props.handleCloseBtn}>
                     x
