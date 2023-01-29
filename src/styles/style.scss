@@ -103,7 +103,7 @@ body {
         align-items: center;
 
         a {
-            transition: all 0.2s ease-in-out;
+            transition: color 0.2s ease-in-out;
             font-weight: 400;
             letter-spacing: 1px;
         }
@@ -118,7 +118,7 @@ body {
             font-size: inherit;
             border: none;
             cursor: pointer;
-            transition: all 0.2s ease-in-out;
+            transition: color 0.2s ease-in-out;
         }
 
         .btn:hover {
@@ -176,7 +176,7 @@ body {
                 font-size: 1.25rem;
                 padding: 5px 10px;
                 cursor: pointer;
-                transition: all 0.2s ease-in-out;
+                transition: color 0.2s ease-in-out;
             }
 
             .btn:hover {
@@ -201,7 +201,7 @@ body {
 
             img {
                 width: 400px;
-                transition: all 0.25s ease-in-out;
+                transition: scale 0.25s ease-in-out;
             }
 
             img:hover {
@@ -390,7 +390,7 @@ body {
     }
 
     a {
-        transition: all 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out;
     }
 
     a:hover {
@@ -430,7 +430,7 @@ body {
     }
 
     a {
-        transition: all 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out;
     }
 
     a:hover {
@@ -443,7 +443,7 @@ body {
     right: 0;
     top: 0;
     min-width: 500px;
-    width: 40vw;
+    width: 33vw;
     min-height: 100vh;
     border: var(--border);
     padding: 1.5rem;
@@ -507,7 +507,7 @@ body {
                 font-size: 1.25rem;
                 border: none;
                 cursor: pointer;
-                transition: all 0.2s ease-in-out;
+                transition: color 0.2s ease-in-out;
             }
 
             .remove-btn:hover {
@@ -515,21 +515,27 @@ body {
             }
 
             .counter {
-                position: absolute;
-                right: 3rem;
                 display: flex;
                 align-items: center;
-                gap: 5px;
+                gap: 1rem;
+
+                span {
+                    font-size: 1rem;
+                    font-weight: 200;
+                }
             }
 
             .counter-btn {
                 background-color: inherit;
                 color: var(--homepage-color-1);
-                border-radius: 1rem;
                 border: none;
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 cursor: pointer;
-                transition: all 0.2s ease-in-out;
+                transition: color 0.2s ease-in-out;
+            }
+
+            .minus {
+                padding-bottom: 2px;
             }
 
             .counter-btn:hover {

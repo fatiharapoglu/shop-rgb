@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faMinusSquare, faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 
 const Basket = (props) => {
     const [total, setTotal] = useState(0);
@@ -15,7 +15,7 @@ const Basket = (props) => {
     }, [props]);
 
     const handleMinus = (e) => {
-        let ID = e.target.parentNode.parentNode.lastChild.dataset.id;
+        let ID = e.target.parentNode.parentNode.parentNode.lastChild.dataset.id;
         const item = props.basketList.find((item) => item.id === Number(ID));
         if (item.counter === 1) return;
         const newList = props.basketList.map((item) => {
@@ -28,7 +28,7 @@ const Basket = (props) => {
     };
 
     const handlePlus = (e) => {
-        let ID = e.target.parentNode.parentNode.lastChild.dataset.id;
+        let ID = e.target.parentNode.parentNode.parentNode.lastChild.dataset.id;
         const newList = props.basketList.map((item) => {
             if (item.id === Number(ID)) {
                 return { ...item, counter: item.counter + 1 };
@@ -61,15 +61,15 @@ const Basket = (props) => {
                                             {item.price.toLocaleString("tr-TR")}
                                         </span>
                                     </h1>
-                                </div>
-                                <div className="counter">
-                                    <button onClick={handleMinus} className="counter-btn">
-                                        -
-                                    </button>
-                                    {item.counter}
-                                    <button onClick={handlePlus} className="counter-btn">
-                                        +
-                                    </button>
+                                    <div className="counter">
+                                        <button onClick={handleMinus} className="counter-btn minus">
+                                            –
+                                        </button>
+                                        <span>{item.counter}</span>
+                                        <button onClick={handlePlus} className="counter-btn">
+                                            +
+                                        </button>
+                                    </div>
                                 </div>
                                 <button
                                     data-id={item.id}
