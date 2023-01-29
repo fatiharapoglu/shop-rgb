@@ -130,11 +130,12 @@ body {
             color: var(--background-primary);
             border-radius: 50%;
             display: inline-flex;
-            width: 1rem;
-            height: 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
             justify-content: center;
             margin-left: 0.5rem;
             font-weight: bold;
+            align-items: center;
         }
     }
 }
@@ -248,7 +249,6 @@ body {
             align-items: center;
             width: clamp(200px, 30vw, 400px);
             border: var(--border);
-            border-radius: 1rem;
             padding: 2rem 1rem 1rem;
             text-align: center;
             gap: 1rem;
@@ -288,7 +288,6 @@ body {
                 color: var(--homepage-color-1);
                 font-size: inherit;
                 border: var(--dashed);
-                border-radius: 1rem;
                 padding: 0.75rem 2rem;
                 width: 100%;
                 cursor: pointer;
@@ -445,7 +444,7 @@ body {
     min-width: 500px;
     width: 33vw;
     min-height: 100vh;
-    border: var(--border);
+    border-left: var(--border);
     padding: 1.5rem;
     background-color: black;
     z-index: 5;
@@ -479,7 +478,7 @@ body {
         overflow: auto;
 
         .basket-product {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -559,12 +558,10 @@ body {
                 position: absolute;
                 font-size: 1rem;
                 top: 40%;
-                left: 50%;
+                left: 52%;
                 transform: translate(-50%, -50%);
                 color: #606060;
-                font-weight: bold;
                 letter-spacing: 1px;
-                text-shadow: 0px 1px 1px #404040;
             }
         }
     }
@@ -583,6 +580,10 @@ body {
             font-weight: 300;
             letter-spacing: 3px;
             font-size: 1.25rem;
+        }
+
+        .price {
+            font-size: 2rem;
         }
     }
 
@@ -608,7 +609,6 @@ body {
         color: var(--homepage-color-1);
         font-size: inherit;
         border: var(--dashed);
-        border-radius: 1rem;
         padding: 0.75rem 2rem;
         width: 100%;
         cursor: pointer;
@@ -629,18 +629,13 @@ body {
     min-width: 250px;
     background-color: black;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: 1rem;
     position: fixed;
     z-index: 10;
     left: 50%;
     transform: translateX(-50%);
-    top: 25vh;
-}
-
-.snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    top: 20vh;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
@@ -669,14 +664,14 @@ body {
     }
 
     to {
-        top: 25vh;
+        top: 20vh;
         opacity: 1;
     }
 }
 
 @keyframes fadeout {
     from {
-        top: 25vh;
+        top: 20vh;
         opacity: 1;
     }
 
