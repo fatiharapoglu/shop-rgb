@@ -10,8 +10,12 @@ import ShopAccessories from "./shop/c-accessories";
 const Shop = (props) => {
     const handleBasketChange = (newItem) => {
         const isDuplicate = props.basketList.find((item) => item.id === newItem.id);
-        if (isDuplicate !== undefined) return;
+        if (isDuplicate !== undefined)
+            return props.handleSnackbar(
+                "This item is already on your cart. You can change quantity on your basket if you want to order multiple of this item."
+            );
         props.setBasketList([...props.basketList, newItem]);
+        props.handleSnackbar("Item successfully added to your cart.");
     };
 
     return (

@@ -77,7 +77,16 @@ const Basket = (props) => {
                     <h2>TOTAL</h2>
                     <span className="price">{total.toLocaleString("tr-TR")}</span>
                 </div>
-                <button className="proceed-btn">Proceed to Checkout</button>
+                <button
+                    className="proceed-btn"
+                    onClick={() => {
+                        if (props.basketList.length !== 0) {
+                            props.handleSnackbar("Thanks for buying!");
+                        }
+                    }}
+                >
+                    Proceed to Checkout
+                </button>
                 <button className="btn" onClick={props.handleCloseBtn}>
                     x
                 </button>

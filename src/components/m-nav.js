@@ -50,6 +50,7 @@ const Nav = (props) => {
                     handleCloseBtn={handleCloseBtn}
                     handleRemoveBtn={handleRemoveBtn}
                     setCartLength={setCartLength}
+                    handleSnackbar={props.handleSnackbar}
                 />
             )}
         </nav>

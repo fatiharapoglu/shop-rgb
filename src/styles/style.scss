@@ -598,6 +598,25 @@ body {
     border-bottom: 1px solid var(--hover);
 }
 
+.snackbar {
+    min-width: 250px;
+    background-color: black;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25vh;
+}
+
+.snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
 @keyframes color-change {
     0% {
         color: red;
@@ -616,8 +635,32 @@ body {
     }
 }
 
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 25vh;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 25vh;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 1rem;
 }
 
 ::-webkit-scrollbar-track {
