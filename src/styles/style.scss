@@ -536,6 +536,31 @@ body {
                 color: var(--hover);
             }
         }
+
+        .basket-empty {
+            text-align: center;
+            padding-top: 25vh;
+
+            div {
+                position: relative;
+                padding-top: 1rem;
+                font-size: 10rem;
+                opacity: 50%;
+            }
+
+            div::after {
+                content: "Your basket is empty.";
+                position: absolute;
+                font-size: 1rem;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #606060;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-shadow: 0px 1px 1px #404040;
+            }
+        }
     }
 
     .basket-total {
@@ -588,10 +613,6 @@ body {
         color: var(--hover);
         background-color: var(--homepage-color-3);
     }
-}
-
-.container {
-    color: var(--homepage-color-1);
 }
 
 .active {
