@@ -7,7 +7,7 @@
     --primary: #dcd7c9;
     --font-1: "Montserrat", sans-serif;
     --homepage-color-2: #0d0d0d;
-    --homepage-color-3: #ffbc00;
+    --homepage-color-3: #ffcf40;
     --homepage-transparent-1: rgba(0, 0, 0, 0.25);
     --homepage-transparent-2: rgba(0, 0, 0, 0.5);
     --border: 1px solid rgb(46, 46, 46);
@@ -458,12 +458,12 @@ body {
     min-width: 500px;
     width: 33vw;
     min-height: 100vh;
-    border-left: var(--border);
     padding: 1.5rem;
     background-color: var(--homepage-color-2);
     z-index: 5;
     transform: translateX(0);
     transition: all 0.25s ease-in-out;
+    box-shadow: 0px 0px 5px 0px black;
 
     > h1 {
         text-align: center;
@@ -493,7 +493,7 @@ body {
         height: 75vh;
         min-height: 500px;
         overflow: auto;
-        box-shadow: inset 0px 0px 10px 0px var(--homepage-transparent-2);
+        box-shadow: inset 0px 0px 5px 0px var(--homepage-transparent-2);
         background-color: var(--homepage-transparent-1);
 
         .basket-product {
@@ -541,7 +541,6 @@ body {
             .counter {
                 display: flex;
                 align-items: center;
-                gap: 1rem;
 
                 span {
                     font-size: 1rem;
@@ -552,9 +551,9 @@ body {
             .counter-btn {
                 background-color: inherit;
                 border: none;
-                font-size: 1.25rem;
                 cursor: pointer;
                 transition: color 0.2s ease-in-out;
+                color: var(--homepage-color-3);
             }
 
             .minus {
@@ -640,6 +639,7 @@ body {
         gap: 0.5rem;
         justify-content: center;
         align-items: center;
+        box-shadow: inset 0px 0px 5px 0px var(--homepage-transparent-2);
     }
 
     .proceed-btn:hover {
@@ -678,19 +678,22 @@ body {
 
 @keyframes color-change {
     0% {
-        color: red;
+        color: rgb(255, 0, 0);
     }
-    25% {
-        color: blue;
+    20% {
+        color: rgb(0, 255, 0);
     }
-    50% {
-        color: green;
+    40% {
+        color: rgb(0, 165, 255);
     }
-    75% {
-        color: blue;
+    60% {
+        color: rgb(255, 255, 0);
+    }
+    80% {
+        color: rgb(255, 0, 255);
     }
     100% {
-        color: red;
+        color: rgb(255, 0, 0);
     }
 }
 
