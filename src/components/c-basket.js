@@ -40,7 +40,7 @@ const Basket = (props) => {
 
     return (
         <>
-            <div className="basket">
+            <div className={`basket ${props.isCartActive ? "open" : "close"}`}>
                 <h1>YOUR BASKET</h1>
                 <div className="basket-content">
                     {props.basketList.length === 0 && (

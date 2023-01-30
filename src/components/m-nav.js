@@ -43,16 +43,15 @@ const Nav = (props) => {
                     {cartLength !== 0 && <span className="basket-counter">{cartLength}</span>}
                 </button>
             </div>
-            {isCartActive && (
-                <Basket
-                    basketList={props.basketList}
-                    setBasketList={props.setBasketList}
-                    handleCloseBtn={handleCloseBtn}
-                    handleRemoveBtn={handleRemoveBtn}
-                    setCartLength={setCartLength}
-                    handleSnackbar={props.handleSnackbar}
-                />
-            )}
+            <Basket
+                basketList={props.basketList}
+                setBasketList={props.setBasketList}
+                handleCloseBtn={handleCloseBtn}
+                handleRemoveBtn={handleRemoveBtn}
+                setCartLength={setCartLength}
+                handleSnackbar={props.handleSnackbar}
+                isCartActive={isCartActive}
+            />
         </nav>
     );
 };

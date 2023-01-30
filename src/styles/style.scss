@@ -462,6 +462,8 @@ body {
     padding: 1.5rem;
     background-color: var(--homepage-color-2);
     z-index: 5;
+    transform: translateX(0);
+    transition: all 0.25s ease-in-out;
 
     > h1 {
         text-align: center;
@@ -492,6 +494,7 @@ body {
         min-height: 500px;
         overflow: auto;
         box-shadow: inset 0px 0px 10px 0px var(--homepage-transparent-2);
+        background-color: var(--homepage-transparent-1);
 
         .basket-product {
             font-size: 0.65rem;
@@ -542,7 +545,6 @@ body {
 
                 span {
                     font-size: 1rem;
-                    font-weight: 200;
                     font-family: emoji;
                 }
             }
@@ -647,10 +649,6 @@ body {
     }
 }
 
-.active {
-    color: var(--hover);
-}
-
 .snackbar {
     min-width: 250px;
     background-color: rgba(0, 0, 0, 0.9);
@@ -664,6 +662,18 @@ body {
     transform: translateX(-50%);
     bottom: 10vh;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.active {
+    color: var(--hover);
+}
+
+.basket.open {
+    transform: translateX(0);
+}
+
+.basket.close {
+    transform: translateX(100%);
 }
 
 @keyframes color-change {

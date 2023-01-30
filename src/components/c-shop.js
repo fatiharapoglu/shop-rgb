@@ -40,7 +40,7 @@ const Shop = (props) => {
                             <NavLink to="/shop/ram">RAMs</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop/accessories">Accessories</NavLink>
+                            <NavLink to="/shop/accessories">Peripherals</NavLink>
                         </li>
                     </ul>
                 </aside>
