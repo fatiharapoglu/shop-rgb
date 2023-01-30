@@ -28,7 +28,7 @@ const Nav = (props) => {
     return (
         <nav className="navbar">
             <div className="navbar-left">
-                <Link to="/">
+                <Link to="/shop-rgb/">
                     <span className="brand">
                         RGB<span>PC</span>
                     </span>
@@ -36,8 +36,8 @@ const Nav = (props) => {
                 <span className="slogan">Where technology meets color.</span>
             </div>
             <div className="navbar-right">
-                <Link to="/shop/all">SHOP</Link>
-                <Link to="/about">ABOUT</Link>
+                <Link to="/shop-rgb/shop/all">SHOP</Link>
+                <Link to="/shop-rgb/about">ABOUT</Link>
                 <button className="btn" onClick={handleBasketClick}>
                     <FontAwesomeIcon icon={faCartShopping} />
                     {cartLength !== 0 && <span className="basket-counter">{cartLength}</span>}

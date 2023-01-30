@@ -32,9 +32,9 @@ const App = () => {
                 handleSnackbar={handleSnackbar}
             />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/shop-rgb/" element={<Home />} />
                 <Route
-                    path="/shop/*"
+                    path="/shop-rgb/shop/*"
                     element={
                         <Shop
                             basketList={basketList}
@@ -43,7 +43,7 @@ const App = () => {
                         />
                     }
                 />
-                <Route path="/about" element={<About />} />
+                <Route path="/shop-rgb/about" element={<About />} />
             </Routes>
             <Footer />
             {isSnackbarOpen && <Snackbar snackbarText={snackbarText} />}

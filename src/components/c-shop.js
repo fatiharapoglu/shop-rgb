@@ -25,22 +25,22 @@ const Shop = (props) => {
                     <h2>CATEGORIES</h2>
                     <ul>
                         <li>
-                            <NavLink to="/shop/all">All Products</NavLink>
+                            <NavLink to="/shop-rgb/shop/all">All Products</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop/mobo">Motherboards</NavLink>
+                            <NavLink to="/shop-rgb/shop/mobo">Motherboards</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop/gpu">Graphic Cards</NavLink>
+                            <NavLink to="/shop-rgb/shop/gpu">Graphic Cards</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop/cpu">Processors</NavLink>
+                            <NavLink to="/shop-rgb/shop/cpu">Processors</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop/ram">RAMs</NavLink>
+                            <NavLink to="/shop-rgb/shop/ram">RAMs</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop/accessories">Peripherals</NavLink>
+                            <NavLink to="/shop-rgb/shop/accessories">Peripherals</NavLink>
                         </li>
                     </ul>
                 </aside>
