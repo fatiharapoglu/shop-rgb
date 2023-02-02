@@ -303,7 +303,6 @@ body {
             .btn:hover {
                 color: var(--background-primary);
                 background-color: var(--hover);
-                font-weight: bold;
             }
 
             .btn::before {
@@ -645,7 +644,6 @@ body {
     .proceed-btn:hover {
         background-color: var(--hover);
         color: var(--background-primary);
-        font-weight: bold;
     }
 }
 
