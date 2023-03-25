@@ -34,9 +34,9 @@ const App = () => {
                 handleSnackbar={handleSnackbar}
             />
             <Routes>
-                <Route path="/shop-rgb/" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route
-                    path="/shop-rgb/shop/*"
+                    path="/shop/*"
                     element={
                         <Shop
                             basketList={basketList}
@@ -45,7 +45,7 @@ const App = () => {
                         />
                     }
                 />
-                <Route path="/shop-rgb/about" element={<About />} />
+                <Route path="/about" element={<About />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

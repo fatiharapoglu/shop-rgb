@@ -11,7 +11,7 @@ const Home = () => {
                     <h1>GeForce RTX 40 Series</h1>
                     <h2>BEYOND FAST</h2>
                     <p>NVIDIA® GeForce RTX™ 40 Series GPUs are now available.</p>
-                    <NavLink to="/shop-rgb/shop/all">
+                    <NavLink to="/shop/all">
                         <button className="btn">See All Products</button>
                     </NavLink>
                 </div>
