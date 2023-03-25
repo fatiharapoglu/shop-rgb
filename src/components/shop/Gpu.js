@@ -1,5 +1,4 @@
-import React from "react";
-import products from "../c-products";
+import products from "../Products";
 
 const ShopGPU = (props) => {
     const findProduct = (e) => {

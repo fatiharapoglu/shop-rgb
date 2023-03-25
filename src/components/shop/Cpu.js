@@ -1,5 +1,4 @@
-import React from "react";
-import products from "../c-products";
+import products from "../Products";
 
 const ShopCPU = (props) => {
     const findProduct = (e) => {

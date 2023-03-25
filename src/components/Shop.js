@@ -1,11 +1,11 @@
-import React from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
-import ShopAll from "./shop/c-all";
-import ShopMobo from "./shop/c-mobo";
-import ShopGPU from "./shop/c-gpu";
-import ShopCPU from "./shop/c-cpu";
-import ShopRAM from "./shop/c-ram";
-import ShopAccessories from "./shop/c-accessories";
+
+import ShopAll from "./shop/All";
+import ShopMobo from "./shop/Mobo";
+import ShopGPU from "./shop/Gpu";
+import ShopCPU from "./shop/Cpu";
+import ShopRAM from "./shop/Ram";
+import ShopAccessories from "./shop/Accessories";
 
 const Shop = (props) => {
     const handleBasketChange = (newItem) => {

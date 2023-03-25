@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import Basket from "./c-basket";
+
+import Basket from "./Basket";
 
 const Nav = (props) => {
     const [isCartActive, setIsCartActive] = useState(false);

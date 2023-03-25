@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -8,6 +7,7 @@ import {
     faLinkedin,
     faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
+
 import github from "../assets/GitHub-Mark-Light-120px-plus.png";
 
 const Footer = () => {
@@ -117,10 +117,7 @@ const Footer = () => {
             <footer className="footer-footer">
                 <div className="about">
                     <span>
-                        <a
-                            href="https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart"
-                            id="odin"
-                        >
+                        <a href="https://www.theodinproject.com/" id="odin">
                             The Odin Project{" "}
                         </a>
                         | fatiharapoglu

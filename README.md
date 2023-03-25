@@ -1,9 +1,30 @@
-# RGBPC (React Shopping Cart)
+# RGBPC Components Shop
 
-[The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart)'s node path React shopping cart project.
+A simple React shopping cart application.
 
-Created with React.
+Created with **React**.
 
-[Click for live preview](https://fatiharapoglu.github.io/shop)
+⮕ [Live preview](https://fatiharapoglu.github.io/shop-rgb/)
 
-![RPS](src/assets/readme.png)
+## Features
+
+-   Clean user interface.
+-   Add and remove products from the shopping cart.
+-   Filtered products by categories.
+-   Snackbar feedback in certain situations.
+-   Custom 404 page.
+
+## Helper Dependencies
+
+-   [FontAwesome](https://fontawesome.com/) Icons
+-   [Sass](https://sass-lang.com/) for SCSS
+-   [Eslint](https://eslint.org/) for linting
+-   [Prettier](https://prettier.io/) for formatting
+
+## Roadmap
+
+-   Make design responsive.
+
+## How It Looks
+
+![ss](./src/assets/readme.png)

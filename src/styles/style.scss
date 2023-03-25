@@ -137,6 +137,8 @@ body {
             margin-left: 0.5rem;
             font-weight: bolder;
             align-items: center;
+            transform: translate(-20px, -15px);
+            scale: 0.75;
         }
     }
 }
@@ -433,7 +435,7 @@ body {
         height: 25px;
         padding-left: 10px;
         padding: 0 10px;
-        transition: transform 1s ease-in-out;
+        transition: transform 0.5s ease-in-out;
     }
 
     .github-icon:hover {
@@ -673,6 +675,25 @@ body {
 
 .basket.close {
     transform: translateX(100%);
+}
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 77.5vh;
+
+    .error-code {
+        font-size: 5rem;
+        color: darkred;
+    }
+
+    a {
+        font-size: 1.25rem;
+        color: lightblue;
+    }
 }
 
 @keyframes color-change {

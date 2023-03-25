@@ -1,6 +1,6 @@
-import React from "react";
-import video from "../assets/background.mp4";
 import { NavLink } from "react-router-dom";
+
+import video from "../assets/background.mp4";
 import rtx from "../assets/4090.png";
 
 const Home = () => {
