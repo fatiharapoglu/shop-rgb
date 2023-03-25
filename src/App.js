@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/m-home";
-import Shop from "./components/c-shop";
-import About from "./components/c-about";
-import Nav from "./components/m-nav";
-import Footer from "./components/m-footer";
-import Snackbar from "./components/c-snackbar";
+
+import Home from "./components/Home";
+import Shop from "./components/Shop";
+import About from "./components/About";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Snackbar from "./components/Snackbar";
+import NotFound from "./components/404";
 
 const App = () => {
     const [basketList, setBasketList] = useState([]);
@@ -44,6 +46,7 @@ const App = () => {
                     }
                 />
                 <Route path="/shop-rgb/about" element={<About />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
             {isSnackbarOpen && <Snackbar snackbarText={snackbarText} />}
