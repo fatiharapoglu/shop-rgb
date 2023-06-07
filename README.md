@@ -13,6 +13,7 @@ Created with **React**.
 -   Filtered products by categories.
 -   Snackbar feedback in certain situations.
 -   Custom 404 page.
+-   Responsive design.
 
 ## Helper Dependencies
 
@@ -21,10 +22,16 @@ Created with **React**.
 -   [Eslint](https://eslint.org/) for linting
 -   [Prettier](https://prettier.io/) for formatting
 
-## Roadmap
-
--   Make design responsive.
-
 ## How It Looks
 
 ![ss](./src/assets/readme.png)
+
+## Contact
+
+⮕ [Portfolio](https://fatiharapoglu.dev)
+
+⮕ [LinkedIn](https://www.linkedin.com/in/fatiharapoglu/)
+
+## License
+
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.

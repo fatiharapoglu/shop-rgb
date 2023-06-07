@@ -67,6 +67,7 @@ body {
     padding: 2.5rem 7.5rem;
     background-color: var(--homepage-transparent-1);
     align-items: center;
+    white-space: nowrap;
 
     .navbar-left {
         .brand {
@@ -190,11 +191,13 @@ body {
 
             h1 {
                 font-size: 3rem;
+                white-space: nowrap;
                 color: var(--homepage-color-3);
             }
 
             h2 {
                 font-size: 2rem;
+                white-space: nowrap;
             }
 
             p {
@@ -256,14 +259,14 @@ body {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: clamp(200px, 30vw, 400px);
+            width: clamp(250px, 30vw, 400px);
             padding: 2rem 1rem 1rem;
             text-align: center;
             gap: 1rem;
             background-color: var(--homepage-transparent-1);
 
             img {
-                width: clamp(200px, 15vw, 250px);
+                width: clamp(250px, 15vw, 250px);
                 aspect-ratio: 1;
                 object-fit: scale-down;
                 margin-bottom: 1rem;
@@ -458,13 +461,15 @@ body {
     top: 0;
     min-width: 500px;
     width: 33vw;
-    min-height: 100vh;
+    height: 100%;
     padding: 1.5rem;
     background-color: var(--homepage-color-2);
     z-index: 5;
     transform: translateX(0);
     transition: all 0.25s ease-in-out;
     box-shadow: 0px 0px 5px 0px black;
+    display: flex;
+    flex-direction: column;
 
     > h1 {
         text-align: center;
@@ -491,8 +496,8 @@ body {
         flex-direction: column;
         gap: 0.5rem;
         padding-right: 1rem;
-        height: 75vh;
-        min-height: 500px;
+        height: 75%;
+        min-height: 350px;
         overflow: auto;
         box-shadow: inset 0px 0px 5px 0px var(--homepage-transparent-2);
         background-color: var(--homepage-transparent-1);
@@ -599,6 +604,7 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        margin-top: auto;
 
         h2 {
             text-align: center;
@@ -756,4 +762,133 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--hover);
+}
+
+@media (width <= 1000px) {
+    .navbar {
+        padding: 1rem 3rem;
+
+        .navbar-right {
+            gap: 1rem;
+        }
+
+        .navbar-left {
+            .slogan {
+                display: none;
+            }
+        }
+    }
+
+    .homepage {
+        .homepage-main-wrapper {
+            padding: 3rem;
+            gap: 1rem;
+
+            .homepage-main {
+                h1 {
+                    font-size: 1.25rem;
+                }
+                h2 {
+                    font-size: 0.8rem;
+                }
+                p {
+                    font-size: 0.65rem;
+
+                    text-align: center;
+                }
+            }
+
+            .main-image {
+                img {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+    .homepage-footer {
+        gap: 1rem;
+        padding: 3rem;
+    }
+
+    .shop-wrapper {
+        padding: 1rem;
+
+        .shop-aside {
+            padding: 0;
+
+            h2 {
+                letter-spacing: normal;
+                font-size: 1rem;
+                padding-bottom: 0.75rem;
+            }
+
+            ul {
+                gap: 0.5rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        .shop-main {
+            gap: 0.5rem;
+            padding-left: 1rem;
+
+            .product {
+                img {
+                    width: 100px;
+                }
+
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .basket {
+        inset: 0;
+        width: 100%;
+        min-width: 475px;
+    }
+
+    .about-wrapper {
+        padding: 2rem;
+    }
+}
+
+@media (width <= 700px) {
+    .shop-wrapper {
+        .shop-main {
+            gap: 0.5rem;
+            padding-left: 1rem;
+
+            .product {
+                gap: 0.25rem;
+                padding: 1rem 0.5rem 0.5rem;
+                width: 175px;
+
+                img {
+                    width: 50px;
+                }
+
+                h2 {
+                    font-size: 0.75rem;
+                }
+
+                .price {
+                    font-size: 1rem;
+
+                    &::after {
+                        font-size: 1rem;
+                    }
+                }
+
+                .btn {
+                    font-size: 0.5rem;
+                    padding: 0;
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+    }
 }
